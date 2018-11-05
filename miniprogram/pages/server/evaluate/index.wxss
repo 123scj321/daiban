@@ -1,0 +1,113 @@
+/* pages/server/evaluate/index.wxss */
+/* 筛选列表 */
+.classic-container{
+  width:700rpx;
+  background: #fff;
+  height: 80rpx;
+  display: flex;
+  justify-content: space-around;
+  margin:50rpx auto;
+}
+.classic-container .classic-item text{
+  padding:10rpx 20rpx;
+  border-radius: 10rpx;
+  background: #0090ec;
+  font-size:30rpx;
+  color:#fff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.classic-container .classic-item .active{
+  padding:10rpx 20rpx;
+  border-radius: 10rpx;
+  background: #fff;
+  font-size:30rpx;
+  color:#333333;
+  text-align: center;
+  border:2rpx solid #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*  */
+/* 导师评论  */
+.teacher-list{
+  width:700rpx;
+  margin:30rpx auto;
+}
+.teacher-list .teacher-item{
+  width:700rpx;
+  display: flex;
+  justify-content: space-between;
+  /* height: 180rpx; */
+  margin-top:60rpx;
+}
+.teacher-item .left{
+  width:66rpx;
+  height: 66rpx;
+  border-radius: 50%;
+  
+  box-sizing: border-box;
+}
+.teacher-item .left image{
+  width:66rpx;
+  height: 66rpx;
+  margin-top:-6rpx;
+  margin-left:-6rpx;
+  border-radius: 49rpx;
+}
+.teacher-item .right{
+  width:620rpx;
+  font-size:24rpx;
+  margin-top:-10rpx;
+}
+.teacher-item .right .top{
+  width:100%;
+  display: flex;
+  justify-content: space-between;
+}
+.teacher-item .right .top .nickname{
+  font-size:28rpx;
+  color:#555;
+}
+.teacher-item .right .top .time{
+  font-size:24rpx;
+  color:#888888;
+}
+.teacher-item .right .top .image{
+  margin-left:40rpx;
+  margin-top:-15rpx;
+}
+.teacher-item .right .top .image image{
+  width:26rpx;
+  height: 26rpx;
+  margin-right: 8rpx;
+  margin-top:10rpx;
+}
+.teacher-item .right .teacher-detail{
+  line-height: 38rpx;
+  font-size:28rpx;
+  color:#333333;
+  white-space:normal; 
+  word-break:break-all;
+}
+.teacher-item .right .teacher-time{
+  line-height: 38rpx;
+  text-align: right;
+  font-size:20rpx;
+  color:#a6a6a6;
+}
+.confindence-img{
+  margin-top:10rpx;
+  margin-bottom: 10rpx;
+  height: 30rpx;
+  width:100rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.confindence-img image{
+  width:18rpx;
+  height: 16rpx;
+}

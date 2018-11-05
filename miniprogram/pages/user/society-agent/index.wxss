@@ -1,0 +1,232 @@
+/* pages/user/company-agent/index.wxss */
+page{
+  background: #f1f2f4;
+  font-family: "Adobe";
+}
+/* 搜索框 */
+#fixed-top{
+  width:100%;
+  position: fixed;
+  top:0rpx;
+  height: 8vh;
+}
+.search-nav{
+  width:100%;
+  margin:0rpx auto;
+  background: #fff;
+  display: flex;
+  padding-top:10rpx;
+  padding-bottom:10rpx;
+}
+.more-city{
+  width:140rpx;
+  margin-left:25rpx;
+  height: 60rpx;
+  align-items: center;
+  font-size:28rpx;
+  }
+  .more-city .picker{
+  width:100%;
+  display: flex;
+  align-items: center;
+  height: 60rpx;
+}
+.more-city image{
+  width:17rpx;
+  height: 10rpx;
+  display: inline-block;
+  margin-left:20rpx;
+}
+.search-container{
+  width:550rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-radius: 120rpx;
+  background: #f4f4f4;
+  display: flex;
+}
+.search-container image{
+  width: 25rpx;
+  height: 24rpx;
+  margin-top:15rpx;
+  margin-left:45rpx;
+}
+.search-container input{
+  width:560rpx;
+  font-size:24rpx;
+  color:#a6a6a6;
+  margin-left:20rpx;
+  margin-top:4rpx;
+}
+/* 筛选列表 */
+.classic-container{
+  width:100%;
+  background: #fff;
+  height: 80rpx;
+  display: flex;
+  justify-content: space-between;
+  margin:0 auto;
+}
+.classic-container .classic-item{
+  width:220rpx;
+  height: 80rpx;
+  border-radius: 100rpx;
+  font-size:28rpx;
+  color:#333;
+  text-align: center;
+  /* line-height: 80rpx; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.classic-container .classic-item .active{
+  color:#0090ec;
+}
+.classic-container .classic-item image{
+  display: block;
+  width:11rpx;
+  height: 7rpx;
+  margin-left:10rpx;
+}
+
+
+
+/* 推荐企业 */
+.resume{
+  width:100%;
+  background: #fff;
+  margin-top:14vh;
+}
+.resume .list-container{
+  width:100%;
+}
+.resume .list-container .list-item{
+  width:700rpx;
+  display: flex;
+  margin:20rpx auto;
+}
+.resume .list-container .list-item .left{
+  width:150rpx;
+}
+.resume .list-container .list-item .left image{
+  width:120rpx;
+  height: 120rpx;
+}
+.resume .list-container .list-item .right{
+  width:550rpx;
+}
+.resume .list-container .list-item .right .title{
+  font-size:28rpx;
+  color:#333;
+  font-weight: bold;
+  padding:0;
+}
+.resume .list-container .list-item .right .subtitle{
+  font-size:24rpx;
+  margin-top:20rpx;
+  color:#888;
+  padding:0;
+}
+.resume .list-container .list-item .right .sign-container{
+  width:100%;
+  display: flex;
+  border-radius: 5rpx;
+  margin-top:20rpx;
+}
+.resume .list-container .list-item .right .sign-container text{
+  display: block;
+  font-size:22rpx;
+  padding:2rpx 10rpx;
+  margin-right: 10rpx;
+}
+.resume .list-container .list-item .right .sign-container .y{
+  color:#ff9833;
+  background: #fff4ea;
+}
+.resume .list-container .list-item .right .sign-container .r{
+  color:#ee3112;
+  background: #fdeae7;
+}
+.resume .list-container .list-item .right .sign-container .b{
+  color:#0090ec;
+  background: #eaf1ff;
+}
+
+/* 底部遮罩层 */
+.choose-list-container{
+  width:100%;
+  position: fixed;
+  height: 87vh;
+  top:13vh;
+  background: rgba(0, 0, 0, 0.3);
+}
+.bottom-mask{
+  width:100%;
+  /* position: fixed; */
+  height: 60vh;
+  /* top:13vh;
+  background: rgba(0, 0, 0, 0.3); */
+}
+.bottom-mask .select-container{
+  width:100%;
+  background: #fff;
+  min-height: 520rpx;
+}
+.bottom-mask .select-container .item{
+  width:700rpx;
+  margin:0 auto;
+  font-size:28rpx;
+  color:#333;
+  padding-top: 20rpx;
+  padding-bottom:20rpx;
+}
+.bottom-mask .select-container .active{
+  width:700rpx;
+  margin:0 auto;
+  font-size:28rpx;
+  color:#0090ec;
+  padding-top: 20rpx;
+  padding-bottom:20rpx;
+}
+.border-top{
+  border-top:2rpx solid #ddd;
+}
+.border-bottom{
+  width:725rpx;
+  margin-left:24rpx;
+  border-bottom: 2rpx solid #ddd;
+}
+
+
+/* 省市级联样式 */
+.citybody {
+  position: fixed;
+  bottom: 0px;
+  background: #fff;
+}
+
+.cityheader {
+  position: absolute;
+  top:0px;
+  width: 100%;
+  z-index: 4;
+}
+
+.city-cancel {
+  float: left;
+  margin: 20rpx;
+  color: #818181;
+}
+
+.city-true {
+  float: right;
+  margin: 20rpx;
+  color: #2FB42E
+}
+
+.section .picker {
+  background-color: #fff;
+  border-bottom: 1px #d9d9d9 solid;
+  border-top: 1px #d9d9d9 solid;
+  padding: 20rpx;
+}

@@ -1,0 +1,23 @@
+<!--pages/user/news/index.wxml-->
+<block wx:if='{{data.length == 0?true:false}}'>
+    <view class='record-empty'>
+      <view class='record-empty-line'></view>
+      <text>没有找到数据</text>
+    </view>
+  </block>
+  <block wx:else>
+    <view class='record-module' wx:if='{{data.length > 0}}'>
+      <view class='record-module-item' wx:for='{{data}}'  wx:key='{{item.create_time}}'>
+        <view class='left'>
+          <image src='{{imgUrl}}notice.png'></image>
+        </view>
+        <view class='right'>
+          <view class='t1'>
+            <text>【系统通知】</text>
+            <text class='time'>1分钟前</text>
+          </view>
+          <view class='t2'> 您反馈的问题正在处理中。</view>
+        </view>
+      </view>
+    </view>
+  </block>

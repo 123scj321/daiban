@@ -1,0 +1,186 @@
+/* pages/user/order-detail/index.wxss */
+page{
+  background: #F2F2F2;
+}
+/* 订单状态 */
+.order_status{
+  width:100%;
+  color:#fff;
+  background: url(http://127.0.0.1/img/user/order02.png) top center;
+  background-size: 100% 100%;
+  height: 100rpx;
+  font-size:34rpx;
+  line-height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top:0rpx;
+  left:0rpx;
+}
+.order_status image{
+  width:33rpx;
+  height: 40rpx;
+  display: block;
+}
+.order_status text{
+  display: block;
+  margin-left:30rpx;
+}
+.page-head{
+  background: #FFF;
+  width: 100%;
+  padding-bottom: 30rpx;
+}
+.status-view{
+  font-size: 40rpx;
+  line-height: 40rpx;
+  margin: 20rpx 0;
+  text-align: center;
+}
+.status-icon{
+  width: 40rpx;
+  height: 40rpx;
+  padding: 0 15rpx;
+}
+.status-font{
+  position: relative;
+  top: -3rpx;
+}
+.page-content{
+  background: #fff;
+  margin:25rpx auto;
+  padding-bottom:30rpx;
+}
+.title{
+  font-size: 30rpx;
+  padding: 15rpx;
+  font-weight: bold;
+}
+
+.data-table{
+  padding: 0 15rpx;
+}
+.data-item{
+  display: flex;
+  margin: 30rpx 0 0;
+  font-size: 28rpx;
+  justify-content: space-between;
+}
+.data-item-label{
+  color: #666;
+  min-width: 160rpx;
+}
+.data-item-info{
+  color: #222;
+   text-align: left;overflow: hidden;
+}
+
+.data-item-btn-group{
+  overflow: hidden;
+  text-align: right;
+}
+.data-item-btn-group button{
+  display: inline-block;
+  font-size: 25rpx;
+  margin: 0 10rpx;
+  background: green;
+  color: #FFF;
+}
+
+.soundRecordingPlay{
+  height: 50rpx;width: 120rpx;
+  border-radius: 50rpx;
+  font-size: 20rpx;
+  line-height: 50rpx;
+  background: #5b9bf3;
+  padding: 0 5%;
+  display: flex;
+  justify-content: space-between;text-align: right;
+}
+
+.soundRecording-icon{
+  width: 22rpx;
+  height: 32rpx;
+  display: inline-block;margin: 0 10rpx 0 20rpx;
+}
+
+.image-group{width: 510rpx;text-align: right;color:#0090ec;}
+.image-group-right{text-align: right;}
+/* 图片集合 */
+.image-group .image-item{
+  width: 24rpx;
+  height: 24rpx;
+  margin-right: 20rpx;
+  
+}
+.border-top{
+  width:730rpx;
+  margin:0 auto;
+  border-top:2rpx solid #e2e2e2;
+}
+.title-context{
+  width:100%;
+  margin:0rpx auto;
+  padding-top:10rpx;
+  padding-bottom: 10rpx;
+}
+.title-context .title{
+  display: flex;align-items: center;justify-content: space-between;
+  color:#0090ec;
+}
+.title-context .title .l{
+  display: flex;align-items: center;font-size:38rpx;color:#333333;
+}
+.title-context .title .r{
+  display: flex;align-items: center;font-size:26rpx;color:#333333;
+}
+.title-context .title image{
+  width:40rpx;
+  height: 40rpx;
+  margin-right:20rpx;
+}
+.title-context .status-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.title-context .status-container .order-going-status{
+  width:40%;
+  text-align: left;
+}
+.title-context .status-container .status{
+  width:60%;
+  text-align: right;
+} 
+.title-context .status view{
+  display: inline-block;
+  padding: 10rpx 33rpx;
+  border:1rpx solid #e2e2e2; margin-right: 20rpx;
+  background: none;
+  font-size:26rpx;
+  border-radius: 8rpx;
+}
+.button-container{
+  width: 50%;
+  margin-left:50%;
+  text-align: right;
+  display: flex;
+  justify-content:right;
+  margin-bottom:60rpx;
+  margin-top:30rpx;
+}
+.button-container button{
+  border:2rpx solid #ddd;
+  background: none;
+  width:180rpx;
+  font-size:28rpx;
+  line-height: 60rpx;
+  padding:2rpx 5rpx;
+  color:#888888;
+  margin-right:20rpx;
+}
+.button-container .evaluate-btn{
+border:2rpx solid #0090ec;
+color:#0090ec;
+}

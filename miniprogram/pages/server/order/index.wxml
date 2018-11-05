@@ -1,0 +1,48 @@
+<!--pages/server/order/index.wxml-->
+<!-- 订单列表 -->
+<view class='container'>
+  <view class='page-content'>
+    <view class='switch-panel'>
+      <view class='switch-panel-title'>
+        <block wx:for="{{order_data}}" wx:key="{{order_data}}" wx:index="index">
+          <view class='switch-panel-title-item {{currentItemId ==index ? "active" : ""}}' bindtap='selectSwiper' data-listid="{{index}}">
+            <text>{{item.title}}</text>
+          </view>
+        </block>
+      </view>
+      <swiper current-item-id="{{currentItemId}}" class='switch-panel-swiper' bindchange='changeSwiper'>
+        <!-- 待接单  -->
+        <block wx:for="{{order_data}}" wx:key="{{order_data}}" wx:index="index">
+          <swiper-item item-id="{{index}}">
+            <scroll-view scroll-y="true" class='switch-panel-content' bindscrolltolower="refreshData" data-type='{{index}}' data-index="1">
+              <view class='resume'>
+                <view class='border-top'></view>
+                <view class='list-container'>
+                  <block wx:for="{{item.message}}" wx:key="{{item.message}}" wx:index="index">
+                    <view class='list-item'>
+                      <view class='left'>
+                        <image src="{{imgUrl}}company-logo.png"></image>
+                      </view>
+                      <view class='right'>
+                        <view class='title'>代办公司注册（一证五章）专业代理记账</view>
+                        <view class='subtitle'>2018-01-12   13:00</view>
+                        <view class='border-top'></view>
+                        <view class='sign-container' bindtap='into_next_page' data-url="../message-second/index?id={{item.id}}">
+                          <text>代办工商注册等项目</text>
+                          <image src="{{imgUrl}}more03.png"></image>
+                        </view>
+                      </view>
+                    </view>
+                    <view class='border-top'></view>
+                  </block>
+                </view>
+              </view>
+            </scroll-view>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+  </view>
+</view>
+
+

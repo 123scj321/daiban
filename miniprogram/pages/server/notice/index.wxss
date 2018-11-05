@@ -1,0 +1,105 @@
+/* pages/server/notice/index.wxss */
+page{
+  background: #f1f2f4;
+}
+/* 标题 */
+.main-title{
+  width:700rpx;
+  margin:30rpx auto;
+  font-size:32rpx;
+  color:#0090ec;
+}
+/* 关注列表 */
+.resume{
+  width:100%;
+  
+  margin-top:10rpx;
+}
+.resume .title{
+  width:700rpx;
+  margin:0rpx auto;
+  align-items: center;
+  display: flex;
+  padding-top:20rpx;
+  padding-bottom:20rpx;
+  justify-content: space-between;
+}
+.resume .title text{
+  font-size:32rpx;font-weight: bold;color:#333;
+}
+.resume .title image{
+  width:16rpx;
+  height: 30rpx;
+}
+.resume .list-container{
+  width:100%;
+}
+.resume .list-container .list-item-container{
+  width:100%;
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+.resume .list-container .list-item{
+  width:700rpx;
+  display: flex;
+  margin:20rpx auto;
+  padding-top:20rpx;
+  
+}
+.resume .list-container .list-item .left{
+  width:100rpx;
+  height: 100rpx;
+  align-items: center;
+  box-shadow: 0rpx 0rpx 20rpx #0090ec;
+  border-radius: 50%;
+}
+.resume .list-container .list-item .left image{
+  width:90rpx;
+  height: 90rpx;
+  margin:5rpx 5rpx;
+}
+.resume .list-container .list-item .right{
+  margin-left:20rpx;
+}
+.resume .list-container .list-item .right .title{
+  font-size:32rpx;
+  color:#333;
+  font-weight: bold;
+  padding-top:10rpx;
+  padding-bottom:1
+  20rpx;
+}
+.resume .list-container .list-item .right .subtitle{
+  width:550rpx;
+  font-size:28rpx;
+  color:#888;
+  padding:0;
+  text-align: right;
+  margin-top:-20rpx;
+}
+.resume .list-container .list-item .right .subtitle image{
+  width:40rpx;
+  height: 40rpx;
+}
+.resume .list-container .list-item .right .sign-container{
+  width:100%;
+  display: flex;
+  border-radius: 5rpx;
+  margin-top:20rpx;
+  align-items: center;
+  font-size:28rpx;
+  margin-right: 10rpx;
+  color:#0090ec;
+}
+.resume .list-container .list-item .right .sign-container text{
+  display: block;
+  font-size:28rpx;
+  color:#0090ec;
+}
+.resume .list-container .list-item .right .sign-container image{
+  width:11rpx;
+  height: 18rpx;
+}
+.border-top{
+  border-top:2rpx solid #ddd;
+}

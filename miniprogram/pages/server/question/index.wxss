@@ -1,0 +1,58 @@
+/* pages/server/question/index.wxss */
+page{
+  font-size:28rpx;
+  color:#333;
+  margin:0 auto;
+  background: #f1f2f4;
+}
+.question-container{
+  background: #fff;
+  margin:30rpx auto;
+  padding-top:20rpx;
+  padding-bottom:20rpx;
+}
+.teacher-abstract{
+  width:750rpx;
+  display: flex;
+  font-size:30rpx;
+  color:#353535;
+  font-weight: bold;
+}
+.teacher-abstract icon{
+  display: block;
+  width:8rpx;
+  height: 45rpx;
+  background: #e8b468;
+  margin-right: 8rpx;
+  border-radius: 16rpx;
+}
+.main-text{
+  text-indent: 1.5rem;
+  font-size:28rpx;
+  color:#555555;
+  display: flex;
+  margin:30rpx auto;
+}
+.item{
+  font-size:32rpx;
+  font-weight: 600;
+  text-align: center;
+}
+.text{
+  width:700rpx;
+  margin:20rpx auto;
+  font-size:28rpx;
+  color:#555555;
+  display: flex;
+}
+.text text{
+  display: block;
+  width:30rpx;
+}
+.title{
+  font-size:32rpx;
+  font-weight: 600;
+}
+.borderTtop{
+  border-top:2rpx solid #ddd;
+}

@@ -1,0 +1,56 @@
+<!--pages/user/selected-topics-detail/index.wxml-->
+<!-- 标题 -->
+<view class='title'>
+  你认为新公司做账该怎么做？需要准备什么材料？
+</view>
+<!-- 小标题 -->
+<view class='subtitle'>
+  <text>
+    “ 新公司成立，后续维护主要有两个方面，一个是做账业务，另一个是年报业务，那么公司怎么做账呢? ”
+  </text>
+</view>
+<!-- 列表内容 -->
+<view class='teacher-abstract'>
+  <icon></icon> 公司做账是在成立当月开始的，包括以下内容：
+</view>
+<view  class='text'><text> 1.</text>公司一年12个月的记账和凭证整理</view>
+<view  class='text'><text> 2.</text>税务局规定的定期税务申报</view>
+<view  class='text'><text> 3.</text>单据由客户快递或者发送到本公司</view>
+<view  class='text'><text> 4.</text>公司税务异常情况提醒</view>
+<!-- 图片01 -->
+<view class='about-us-banner'>
+  <image src="{{imgUrl}}item-d01.png"></image>
+</view>
+<!-- 列表内容 -->
+<view class='teacher-abstract'>
+  <icon></icon> 公司做账需准备的材料如下：
+</view>
+<view  class='text'><text> 1.</text>营业执照复印件;</view>
+<view  class='text'><text> 2.</text>组织机构代码证复印件(使用五证合一版营业执照的客户，则不需要)；</view>
+<view  class='text'><text> 3.</text>税务登记证复印件(使用五证合一版营业执照的客户，则不需要)；</view>
+<view  class='text'><text> 4.</text>国地税密码(若不记得，可使用以上证件重置密码)；</view>
+<view  class='text'><text> 5.</text>地税光盘(若无，企业街可以为在我司记账报税的客户免费办理)；</view>
+<view  class='text'><text> 6.</text>企业成立以来的账本(若刚成立，则不需要; 若成立已久，则需酌情补账)。</view>
+<!-- 图片01 -->
+<view class='about-us-banner'>
+  <image src="{{imgUrl}}item-d02.png"></image>
+</view>
+<view  class='text'>注意：公司如果不按税务局的规定时限纳税申报的情节较轻的，除补缴税款外，税务机关将对企业处以每月200元以上的罚款，如果超期更长的，将还会加收滞纳金；对于情节严重的，税务机关将更具情节严重程度，出于相应的更高金额的罚款。</view>
+ <view class='border-top'></view>
+<view class='duty'>
+  <view class='title1'>
+    免责声明
+  </view>
+  <view class='subtitle1'>
+  本文内容整理自网络，本文内容整理自网络，有修改，版权归原作者所有。如有侵权，我们将立即更正或删除相关内容。
+  </view>
+</view>
+<!-- 图片01 -->
+<view class='zan'>
+  <image src="{{zan.zan_img}}" style='transform:scale({{zan.scale}})' bindtap='zan_btn'></image>
+</view>
+<view class='zan-text'>
+  <text>{{zan.zan_count}}人</text>觉得有用
+</view>
+
+

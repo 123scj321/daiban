@@ -1,0 +1,89 @@
+/* pages/server/launch-style/index.wxss */
+/*evaluateContextContainer  */
+.evaluateContextContainer{
+  background: #fff;
+  width:100%;
+  min-height: 800rpx;
+  margin-top:20rpx;
+}
+.evaluateContextButtonList{
+  width:700rpx;
+  margin:0rpx auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: left;
+  font-size:28rpx;
+  color:#555555;
+}
+.evaluateContextButtonItem{
+  border:2rpx solid #ddd;
+  border-radius: 8rpx;
+  margin:10rpx 25rpx;
+  width:180rpx;
+  height:70rpx;
+  line-height:70rpx;
+  text-align: center;
+}
+.evaluateContextButtonItemActive{
+  border:2rpx solid #0090ec;
+  border-radius: 8rpx;
+  margin:10rpx 25rpx;
+  width:180rpx;
+  height:70rpx;
+  line-height:70rpx;
+  text-align: center;
+  color:#0090ec;
+}
+.borderTop{
+  width:100%;
+  height: 2rpx;
+  border-top:2rpx solid #d2d2d2;
+}
+.evaluateContextList{
+  width:700rpx;
+  margin: 0 auto;
+  font-size:24rpx;
+  color:#333;
+}
+.evaluateContextTitle{
+  width:700rpx;
+  margin: 30rpx auto;
+  font-size:32rpx;
+  font-weight: bold;
+  color:#0090ec;
+}
+.evaluateContextItem{
+  display: flex;
+  justify-content: space-between;
+  font-size:28rpx;
+  line-height: 40rpx;
+  padding-top: 40rpx;
+  
+}
+.phoneAndText{
+  max-width: 560rpx;
+}
+.time{
+  color:#888;
+}
+/* 按钮 */
+.btn-container{
+  position: fixed;
+  bottom:0rpx;
+  width:100%;
+  background: #fff;
+  height: 120rpx;
+}
+.btn-container button{
+  width:700rpx;
+  border-radius: 15rpx;
+  line-height: 90rpx;
+  background: linear-gradient(to bottom,#4fb6f7,#0291ec);
+  color:#fff;
+  font-size:40rpx;
+  text-align: center;
+}
+.btn-container button::after{
+  border:none;
+}
+

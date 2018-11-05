@@ -1,0 +1,22 @@
+<!--pages/user/user-server-safe/index.wxml-->
+<view class='main-text'>我们致力于维护用户在平台的权益，先后推出了服
+务保障计划及商家分层权益，帮助用户选择符合预期的
+服务。现在，我们经过多方面的数据调研，总结出服务
+中容易遇到的问题及如何取证点，总结出以下流程：</view>
+<view class='title'>约定服务前</view>
+<view class='text'><text> 1.</text>请确保与商家的交流过程中，商家承诺的均有记录；</view>
+<view  class='text'><text>2.</text>请确定好服务价格及进行服务的时间；</view>
+
+<view class='title'>服务过程中</view>
+<view  class='text'><text> 1.</text>服务过程中请注意保留与商家直接交易证明（包括但
+  不限于收据、发票、转账记录）；</view>
+<view  class='text'><text> 2.</text>若商家坐地起价，确保已掌握首次沟通价格证据；</view>
+<view  class='text'><text> 3.</text>若服务失败，请注意收集相应证据（图片、视频等）</view>
+
+
+
+<view class='title'>服务售后</view>
+<view  class='text'><text> 1.</text>有保障期的服务（电脑维修，房屋维修/防水，管道疏通，家具维修，手机维修，数码维修）请与商家协商确定服务时效，避免发生保障期内拒绝服务现象；</view>
+<view  class='text'><text>2.</text>若商家在保证时效内拒绝服务，请收集商家确定时效证据及拒绝服务证据；</view>
+
+

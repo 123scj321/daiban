@@ -1,0 +1,41 @@
+<!--pages/server/evaluate/index.wxml-->
+<view>
+  <view class='classic-container'>
+    <view class='classic-item' bindtap='selectTimeShowTimeHandler' data-id="0">
+      <text class='{{currentId!=0&&"active"}}'>全部评论</text>
+    </view>
+    <view class='classic-item' bindtap='selectTimeShowTimeHandler' data-id="1">
+      <text class='{{currentId!=1&&"active"}}'>好评(63)</text>
+    </view>
+    <view class='classic-item' bindtap='selectTimeShowTimeHandler' data-id="2">
+      <text class='{{currentId!=2&&"active"}}'>差评(0)</text>
+    </view>
+  </view>
+</view>
+<view class='teacher-list'>
+  <!-- 教师列表 -->
+  <block wx:for="{{evaluate}}" wx:key="{{evaluate}}">
+    <view class='teacher-item'>
+      <view class='left'>
+        <image src="{{imgUrl}}avatar.png" class='avatar'></image>
+      </view>
+      <view class='right'>
+        <view class='top'>
+          <text class='nickname'>134********</text>
+          <text class='time'>2018-08-13</text> 
+        </view>
+        <!-- 等级星 -->
+          <view class='confindence-img'>
+            <image src="{{imgUrl}}small-star.png" bindtap="show_this" data-num="1"></image>
+            <image src="{{imgUrl}}small-star.png" bindtap="show_this" data-num="2"></image>
+            <image src="{{imgUrl}}small-star.png" bindtap="show_this" data-num="3"></image> 
+            <image src="{{imgUrl}}small-star-01.png" bindtap="show_this" data-num="4"></image>
+            <image src="{{imgUrl}}small-star-01.png" bindtap="show_this" data-num="5"></image>
+          </view>
+        <view class='teacher-detail'>
+          <text>专业，沟通融洽，电话相应及时，价格还挺满意。</text>
+        </view>
+      </view>
+    </view> 
+  </block>
+</view> 

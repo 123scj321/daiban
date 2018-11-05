@@ -1,0 +1,33 @@
+<!--pages/server/notice/index.wxml-->
+<!-- 标题 -->
+<view class='main-title'>
+  <text>关注我的（共100名）</text>
+</view>
+<!-- 关注列表 -->
+<view class='resume'>
+  
+  <view class='list-container'>
+    <block wx:for="{{notice}}">
+    <view class='list-item-container'>
+      <view class='border-top'></view>
+      <view class='list-item'>
+        <view class='left'>
+          <image src="{{imgUrl}}avatar.png"></image>
+        </view>
+        <view class='right'>
+          <view class='subtitle'>2018-01-02</view>
+          <view class='title'>用户昵称3</view>
+          <view class='subtitle'><image src="{{imgUrl}}message-01.png"></image></view>
+          <block wx:if="{{item.style==0}}">
+          <view class='border-top'></view>
+          <view class='sign-container'>
+            <text>我的留言：</text>您好，有什么需要让我们帮助的吗？
+          </view>
+          </block>
+        </view>
+      </view>
+      <view class='border-top'></view>
+    </view>
+    </block>
+  </view>
+</view>

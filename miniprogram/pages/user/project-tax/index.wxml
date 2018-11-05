@@ -1,0 +1,90 @@
+<!--pages/user/company-agent/index.wxml-->
+<!-- 搜索 -->
+<view id="fixed-top">
+<view class='search-nav'>
+<!-- 选择更多城市 -->
+  <view class='more-city'>
+    <view class="picker" bindtap="open">
+        <text>{{city}}</text><image src="{{imgUrl}}more.png"></image>
+      </view>
+  </view>
+  <view class='search-container'>
+    <image src="{{imgUrl}}magnifier.png"></image>
+    <input placeholder='公司注册' bindchange='get_search_context' data-url="../search-result/index" value="{{search_context}}"></input>
+  </view>
+</view>
+<view>
+  <view class='classic-container'>
+    <block wx:for="{{company_agent_data}}" wx:key="{{company_agent_data}}" wx:index="index">
+    <view class='classic-item' bindtap='selectTimeShowTimeHandler' data-id="{{index}}">
+      <block wx:if="{{item.is_active}}">
+        <text class='active'>{{item.title}}</text>
+        <image src="{{imgUrl}}tran-01.png"></image>
+      </block>
+      <block wx:else>
+      <text>{{item.title}}</text>
+      <image src="{{imgUrl}}tran.png"></image>
+      </block>
+    </view>
+    </block>
+  </view>
+  <!--底部遮罩层 -->
+  <view class='choose-list-container' hidden='{{select_box}}'>
+  <scroll-view scroll-y style="height: 60vh" class='bottom-mask' bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}" >
+    <view class='select-container'>
+    <view class='border-top'></view>
+    <block wx:for="{{company_agent_data}}" wx:if="{{item.status}}">
+      <block wx:for="{{item.subtitle}}" wx:key="{{item.subtitle}}" wx:index="index">
+        <view class='{{item.is_default?"active":"item"}}' bindtap='select_context' data-id="{{index}}">
+          {{item.text}}
+        </view>
+        <view class='border-bottom'></view>
+      </block>
+    </block>
+    </view>
+  </scroll-view>
+  </view>
+</view>
+</view>
+
+
+<!-- 公司代办 列表-->
+<view class='resume'>
+  <view class='border-top'></view>
+  <view class='list-container'>
+    <block wx:for="{{list_context}}"> 
+    <view class='list-item'>
+      <view class='left'>
+        <image src="{{imgUrl}}companyavatar.png"></image>
+      </view>
+      <view class='right'>
+        <view class='title'>代办公司注册（一证五章）专业代理记账</view>
+        <view class='subtitle'>西安比邻财务管理咨询有限公司</view>
+        <view class='sign-container'>
+          <text class='y'>1000元保证金</text>
+          <text class='r'>1000元保证金</text>
+          <text class='b'>1000元保证金</text>
+        </view>
+      </view>
+    </view>
+    <view class='border-top'></view>
+    </block>
+  </view>
+</view>
+
+
+<!-- 省市级联 -->
+<view wx:if="{{condition}}" class="citypicker">
+  <picker-view indicator-style="height: 50px;" style="width: 100%; height: 300px;" value="{{value}}" bindchange="bindChange" class="citybody">
+    <view class="cityheader">
+      <view bindtap="open" class="city-cancel">取消</view>
+      <view bindtap="open" class="city-true">确定</view>
+    </view>
+    <picker-view-column style="text-align:center;font-size:28rpx;">
+      <view wx:for="{{provinces}}" wx:key="item" style="line-height: 50px;">{{item}}</view>
+    </picker-view-column>
+    <picker-view-column style="text-align:center;font-size:28rpx;">
+      <view wx:for="{{citys}}" wx:key="item" style="line-height: 50px;">{{item}}</view>
+    </picker-view-column>
+  </picker-view>
+</view>

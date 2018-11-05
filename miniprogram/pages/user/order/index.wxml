@@ -1,0 +1,341 @@
+<!--pages/user/order/index.wxml-->
+<!-- 订单列表 -->
+<view class='container'>
+  <view class='page-content'>
+    <view class='switch-panel'>
+      <view class='switch-panel-title'>
+        <block wx:for="{{order_data}}" wx:key="{{order_data}}" wx:index="index">
+          <view class='switch-panel-title-item {{currentItemId ==index ? "active" : ""}}' bindtap='selectSwiper' data-listid="{{index}}">
+            <text>{{item.title}}</text>
+          </view>
+        </block>
+        <!-- <view class='switch-panel-title-item {{currentItemId =="0" ? "active" : ""}}' bindtap='selectSwiper' data-listid="0">
+          <text>待接单</text>
+        </view>
+        <view class='switch-panel-title-item {{currentItemId =="1" ? "active" : ""}}' bindtap='selectSwiper' data-listid="1">
+          <text>待完成</text>
+        </view>
+        <view class='switch-panel-title-item {{currentItemId =="2" ? "active" : ""}}' bindtap='selectSwiper' data-listid="2">
+          <text>已完成</text>
+        </view> -->
+      </view>
+      <swiper current-item-id="{{currentItemId}}" class='switch-panel-swiper' bindchange='changeSwiper'>
+        <!-- 待接单  -->
+        <block wx:for="{{order_data}}" wx:key="{{order_data}}" wx:index="index">
+          <swiper-item item-id="{{index}}">
+            <scroll-view scroll-y="true" class='switch-panel-content' bindscrolltolower="refreshData" data-type='{{index}}' data-index="1">
+              <view class='resume'>
+                <view class='border-top'></view>
+                <view class='list-container'>
+                  <block wx:for="{{item.message}}" wx:key="{{item.message}}" wx:index="index">
+                    <view class='list-item'>
+                      <view class='left'>
+                        <image src="{{imgUrl}}company-logo.png"></image>
+                      </view>
+                      <view class='right'>
+                        <view class='title'>代办公司注册（一证五章）专业代理记账</view>
+                        <view class='subtitle'>2018-01-12   13:00</view>
+                        <view class='border-top'></view>
+                        <view class='sign-container' bindtap='into_next_page' data-url="../company-detail/index?id={{item.id}}">
+                          <text>代办工商注册等项目</text>
+                          <image src="{{imgUrl}}more03.png"></image>
+                        </view>
+                      </view>
+                    </view>
+                    <view class='border-top'></view>
+                  </block>
+                </view>
+              </view>
+            </scroll-view>
+          </swiper-item>
+        </block>
+        <!-- 待接单  -->
+        <!-- <swiper-item item-id="0">
+          <scroll-view scroll-y="true" class='switch-panel-content' bindscrolltolower="refreshData" data-type='0' data-index="1">
+            <view class='resume'>
+              <view class='border-top'></view>
+              <view class='list-container'>
+                <block>
+                  <view class='list-item'>
+                    <view class='left'>
+                      <image src="{{imgUrl}}company-logo.png"></image>
+                    </view>
+                    <view class='right'>
+                      <view class='title'>代办公司注册（一证五章）专业代理记账</view>
+                      <view class='subtitle'>2018-01-12   13:00</view>
+                      <view class='border-top'></view>
+                      <view class='sign-container'>
+                        <text>代办工商注册等项目</text>
+                        <image src="{{imgUrl}}more03.png"></image>
+                      </view>
+                    </view>
+                  </view>
+                  <view class='border-top'></view>
+                </block>
+                
+                <view class='list-item'>
+                  <view class='left'>
+                    <image src="{{imgUrl}}company-logo.png"></image>
+                  </view>
+                  <view class='right'>
+                    <view class='title'>代办公司注册（一证五章）专业代理记账</view>
+                    <view class='subtitle'>2018-01-12   13:00</view>
+                    <view class='border-top'></view>
+                    <view class='sign-container'>
+                      <text>代办工商注册等项目</text>
+                      <image src="{{imgUrl}}more03.png"></image>
+                    </view>
+                  </view>
+                </view>
+                <view class='border-top'></view>
+                <view class='list-item'>
+                  <view class='left'>
+                    <image src="{{imgUrl}}company-logo.png"></image>
+                  </view>
+                  <view class='right'>
+                    <view class='title'>代办公司注册（一证五章）专业代理记账</view>
+                    <view class='subtitle'>2018-01-12   13:00</view>
+                    <view class='border-top'></view>
+                    <view class='sign-container'>
+                      <text>代办工商注册等项目</text>
+                      <image src="{{imgUrl}}more03.png"></image>
+                    </view>
+                  </view>
+                </view>
+                <view class='border-top'></view>
+                <view class='list-item'>
+                  <view class='left'>
+                    <image src="{{imgUrl}}company-logo.png"></image>
+                  </view>
+                  <view class='right'>
+                    <view class='title'>代办公司注册（一证五章）专业代理记账</view>
+                    <view class='subtitle'>2018-01-12   13:00</view>
+                    <view class='border-top'></view>
+                    <view class='sign-container'>
+                      <text>代办工商注册等项目</text>
+                      <image src="{{imgUrl}}more03.png"></image>
+                    </view>
+                  </view>
+                </view>
+                <view class='border-top'></view>
+                <view class='list-item'>
+                  <view class='left'>
+                    <image src="{{imgUrl}}company-logo.png"></image>
+                  </view>
+                  <view class='right'>
+                    <view class='title'>代办公司注册（一证五章）专业代理记账</view>
+                    <view class='subtitle'>2018-01-12   13:00</view>
+                    <view class='border-top'></view>
+                    <view class='sign-container'>
+                      <text>代办工商注册等项目</text>
+                      <image src="{{imgUrl}}more03.png"></image>
+                    </view>
+                  </view>
+                </view>
+                <view class='border-top'></view>
+              </view>
+            </view>
+          </scroll-view>
+        </swiper-item> -->
+        <!-- 待完成  -->
+        <!-- <swiper-item item-id="1">
+          <scroll-view scroll-y="true" class='switch-panel-content' bindscrolltolower="refreshData" data-type='2' data-index="3">
+           <view class='resume'>
+              <view class='border-top'></view>
+              <view class='list-container'>
+                <view class='list-item'>
+                  <view class='left'>
+                    <image src="{{imgUrl}}company-logo.png"></image>
+                  </view>
+                  <view class='right'>
+                    <view class='title'>代办公司注册（一证五章）专业代理记账</view>
+                    <view class='subtitle'>2018-01-12   13:00</view>
+                    <view class='border-top'></view>
+                    <view class='sign-container'>
+                      <text>代办工商注册等项目</text>
+                      <image src="{{imgUrl}}more03.png"></image>
+                    </view>
+                  </view>
+                </view>
+                <view class='border-top'></view>
+                <view class='list-item'>
+                  <view class='left'>
+                    <image src="{{imgUrl}}company-logo.png"></image>
+                  </view>
+                  <view class='right'>
+                    <view class='title'>代办公司注册（一证五章）专业代理记账</view>
+                    <view class='subtitle'>2018-01-12   13:00</view>
+                    <view class='border-top'></view>
+                    <view class='sign-container'>
+                      <text>代办工商注册等项目</text>
+                      <image src="{{imgUrl}}more03.png"></image>
+                    </view>
+                  </view>
+                </view>
+                <view class='border-top'></view>
+                <view class='list-item'>
+                  <view class='left'>
+                    <image src="{{imgUrl}}company-logo.png"></image>
+                  </view>
+                  <view class='right'>
+                    <view class='title'>代办公司注册（一证五章）专业代理记账</view>
+                    <view class='subtitle'>2018-01-12   13:00</view>
+                    <view class='border-top'></view>
+                    <view class='sign-container'>
+                      <text>代办工商注册等项目</text>
+                      <image src="{{imgUrl}}more03.png"></image>
+                    </view>
+                  </view>
+                </view>
+                <view class='border-top'></view>
+                <view class='list-item'>
+                  <view class='left'>
+                    <image src="{{imgUrl}}company-logo.png"></image>
+                  </view>
+                  <view class='right'>
+                    <view class='title'>代办公司注册（一证五章）专业代理记账</view>
+                    <view class='subtitle'>2018-01-12   13:00</view>
+                    <view class='border-top'></view>
+                    <view class='sign-container'>
+                      <text>代办工商注册等项目</text>
+                      <image src="{{imgUrl}}more03.png"></image>
+                    </view>
+                  </view>
+                </view>
+                <view class='border-top'></view>
+                <view class='list-item'>
+                  <view class='left'>
+                    <image src="{{imgUrl}}company-logo.png"></image>
+                  </view>
+                  <view class='right'>
+                    <view class='title'>代办公司注册（一证五章）专业代理记账</view>
+                    <view class='subtitle'>2018-01-12   13:00</view>
+                    <view class='border-top'></view>
+                    <view class='sign-container'>
+                      <text>代办工商注册等项目</text>
+                      <image src="{{imgUrl}}more03.png"></image>
+                    </view>
+                  </view>
+                </view>
+                <view class='border-top'></view>
+              </view>
+            </view>
+          </scroll-view>
+        </swiper-item> -->
+        <!-- 已完成 -->
+        <!-- <swiper-item item-id="2">
+          <scroll-view scroll-y="true" class='switch-panel-content' bindscrolltolower="refreshData" data-type='2' data-index="3">
+            <view class='resume'>
+              <view class='border-top'></view>
+              <view class='list-container'>
+                <view class='list-item'>
+                  <view class='left'>
+                    <image src="{{imgUrl}}company-logo.png"></image>
+                  </view>
+                  <view class='right'>
+                    <view class='title'>代办公司注册（一证五章）专业代理记账</view>
+                    <view class='subtitle'>2018-01-12   13:00</view>
+                    <view class='border-top'></view>
+                    <view class='sign-container'>
+                      <text>代办工商注册等项目</text>
+                      <image src="{{imgUrl}}more03.png"></image>
+                    </view>
+                  </view>
+                </view>
+                <view class='border-top'></view>
+                <view class='list-item'>
+                  <view class='left'>
+                    <image src="{{imgUrl}}company-logo.png"></image>
+                  </view>
+                  <view class='right'>
+                    <view class='title'>代办公司注册（一证五章）专业代理记账</view>
+                    <view class='subtitle'>2018-01-12   13:00</view>
+                    <view class='border-top'></view>
+                    <view class='sign-container'>
+                      <text>代办工商注册等项目</text>
+                      <image src="{{imgUrl}}more03.png"></image>
+                    </view>
+                  </view>
+                </view>
+                <view class='border-top'></view>
+                <view class='list-item'>
+                  <view class='left'>
+                    <image src="{{imgUrl}}company-logo.png"></image>
+                  </view>
+                  <view class='right'>
+                    <view class='title'>代办公司注册（一证五章）专业代理记账</view>
+                    <view class='subtitle'>2018-01-12   13:00</view>
+                    <view class='border-top'></view>
+                    <view class='sign-container'>
+                      <text>代办工商注册等项目</text>
+                      <image src="{{imgUrl}}more03.png"></image>
+                    </view>
+                  </view>
+                </view>
+                <view class='border-top'></view>
+                <view class='list-item'>
+                  <view class='left'>
+                    <image src="{{imgUrl}}company-logo.png"></image>
+                  </view>
+                  <view class='right'>
+                    <view class='title'>代办公司注册（一证五章）专业代理记账</view>
+                    <view class='subtitle'>2018-01-12   13:00</view>
+                    <view class='border-top'></view>
+                    <view class='sign-container'>
+                      <text>代办工商注册等项目</text>
+                      <image src="{{imgUrl}}more03.png"></image>
+                    </view>
+                  </view>
+                </view>
+                <view class='border-top'></view>
+                <view class='list-item'>
+                  <view class='left'>
+                    <image src="{{imgUrl}}company-logo.png"></image>
+                  </view>
+                  <view class='right'>
+                    <view class='title'>代办公司注册（一证五章）专业代理记账</view>
+                    <view class='subtitle'>2018-01-12   13:00</view>
+                    <view class='border-top'></view>
+                    <view class='sign-container'>
+                      <text>代办工商注册等项目</text>
+                      <image src="{{imgUrl}}more03.png"></image>
+                    </view>
+                  </view>
+                </view>
+                <view class='border-top'></view>
+              </view>
+            </view>
+          </scroll-view>
+        </swiper-item> -->
+      </swiper>
+    </view>
+  </view>
+</view>
+<!-- 底部导航 -->
+<view style='height:108rpx;'></view>
+<view class='footer'>
+  <form report-submit='true' class='item' bindtap='footer_handler' data-url="../index/index">
+    <button formType="submit">
+      <image src="{{imgUrl}}home01.png" style="width:40rpx;"></image>
+      <text>首页</text>
+    </button>
+  </form>
+  <form report-submit='true' class='item' bindtap='footer_handler' data-url="../order/index">
+    <button formType="submit">
+       <image src="{{imgUrl}}order.png" style="width:40rpx;"></image>
+      <text class='active'>订单</text>
+    </button>
+  </form>
+  <form report-submit='true' class='item' bindtap='footer_handler' data-url="../personal-information/index">
+    <button formType="submit">
+      <image src="{{imgUrl}}my01.png"></image>
+      <text>我的</text>
+    </button>
+  </form>
+  <form report-submit='true' class='item' bindtap='footer_handler' data-url="../../server/authority-first/index">
+    <button formType="submit">
+      <image src="{{imgUrl}}busess01.png"></image>
+      <text>商家</text>
+    </button>
+  </form>
+</view>

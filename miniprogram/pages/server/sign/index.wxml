@@ -1,0 +1,92 @@
+<!--pages/server/sign/index.wxml-->
+<view class='container'>
+  <view class='page-content'>
+    <!-- 我的会员模块  -->
+    <view class='sub-title-panel'>
+      <view class='content'>
+        <view class='calendar-module'>
+          <view class='calendar-head'>
+            <view class='left'>
+              <image src="{{imgUrl}}vip-left.png" bindtap='data_left_handler'></image>
+            </view>
+            <view class='center'>
+              {{dateArr.year}} 年 {{dateArr.month}} 月
+            </view>
+            <view class='right'>
+              <image src="{{imgUrl}}vip-right.png" bindtap='data_right_handler'></image>
+            </view>
+            
+          </view>
+          <view class='calendar-body'>
+            <view class='calendar-title'>
+              <view class='calendar-title-item'>日</view>
+              <view class='calendar-title-item'>一</view>
+              <view class='calendar-title-item'>二</view>
+              <view class='calendar-title-item'>三</view>
+              <view class='calendar-title-item'>四</view>
+              <view class='calendar-title-item'>五</view>
+              <view class='calendar-title-item'>六</view>
+            </view>
+            <block wx:for="{{monthArr}}" wx:for-item="monthItem" wx:key="">
+              <view class='calendar-time'>
+                <block wx:for="{{monthItem}}" wx:for-item="dayItem" wx:key="">
+                  <view class='calendar-time-item'>
+                    <!-- <block wx:if="{{!dayItem.flag}}"> -->
+                      <view>{{dayItem.value}}</view>
+                      <view class='flag' wx:if="{{dayItem.flag}}"></view> 
+                    <!-- </block> -->
+                    <!-- <block wx:else>
+                      <view><image src="{{imgUrl}}gift-01.png" class='calendar-time-item-img'></image></view>
+                      <view class='flag' wx:if="{{dayItem.flag}}"></view> 
+                    </block> -->
+                  </view>
+                </block>
+              </view>
+            </block>
+          </view>
+        </view>
+      </view>
+      <view class='page-tip'>
+        已累计签到<text>{{sign.day}}</text>天
+      </view>
+      <view class='sign-btn'>
+        <block wx:if="{{!sign.isSign}}">
+          <button bindtap='signIn'>点击签到</button>
+        </block>
+        <block wx:else>
+          <button class='out-sign'>已签到</button>
+        </block>
+      </view>
+    </view>
+    <!--签到奖品 -->
+    <view class='sub-title-panel'>
+      <view class='teacher-abstract'>
+        <icon></icon>签到奖品
+      </view>
+      <block wx:for="{{sign.get_win}}" wx:key="{{sign.get_win}}" wx:index="index">
+        <view class='avatar-container'>
+          <view class="left">
+            <image src="{{imgUrl}}bash.png"></image>
+          </view>
+          <view class='center'>
+            <view class='nickname'>{{item.title}}</view>
+            <view class='image-container'> 
+                <!-- 星星等级 -->
+              <view class='classic'>
+                <text>累计签到 (可获得{{item.grow_point}}点成长值）</text>
+              </view>
+            </view>
+          </view>
+          <view class='right'>
+            <block wx:if="{{item.status}}">
+              <button bindtap='get_win' data-id="{{index}}">领取</button>
+            </block>
+            <block wx:else>
+              <button class='active'>已领取</button>
+            </block>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

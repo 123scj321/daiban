@@ -1,0 +1,127 @@
+<!--pages/user/order-detail/index.wxml-->
+
+<view class='order_status'>
+  <image src="{{imgUrl}}order04.png"></image>
+  <block wx:if="{{order_style==1}}">
+    <text>订单已完成</text>
+  </block>
+  <block wx:if="{{order_style==0}}">
+    <text>待接单</text>
+  </block>
+</view>
+  <view class='page-content' style='margin-top:125rpx'>
+    <view class='title-context'>
+      <view class='title'>
+        订单信息
+      </view>
+    </view>
+    <view class='border-top'></view>
+    <view class='data-table'>
+      <view class='data-item'>
+        <view class='data-item-label'>
+          公司名称
+        </view>
+        <view class='data-item-info'>
+          西安比邻财务管理咨询有限公司
+        </view>
+      </view>
+      <view class='data-item'>
+        <view class='data-item-label'>
+          企业类型</view>
+        <view class='data-item-info'>
+          工商年检；全程代理；注册地址
+        </view>
+      </view>
+      
+      <view class='data-item' >
+        <view class='data-item-label'>
+          联系人</view>
+        <view class='image-group-right'>
+          王经理
+        </view>
+      </view>
+      <view class='data-item'>
+        <view class='data-item-label'>联系电话</view>
+        <view class='image-group'>
+          <image src='{{imgUrl}}phone.png'  class="image-item"></image>
+          <text>13212341234</text>
+        </view>
+      </view>
+      <view class='data-item'>
+        <view class='data-item-label'>
+          商家地址</view>
+        <view class='data-item-info'>
+         未央区凤城二路海洋大厦201号
+        </view>
+      </view>
+      <view class='data-item'>
+        <view class='data-item-label'>
+          订单号</view>
+        <view class='data-item-info'>
+         DD12345678
+        </view>
+      </view>
+      <view class='data-item'>
+        <view class='data-item-label'>
+          订单状态</view>
+        <view class='data-item-info'>
+         无效
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class='page-content'>
+    <view class='title-context'>
+      <view class='title'>
+        留言信息
+      </view>
+    </view>
+    <view class='border-top'></view>
+    <view class='data-table'>
+      <view class='data-item' >
+        <view class='data-item-label'>
+          姓名
+        </view>
+        <view class='data-item-info'>
+        李先生
+        </view>
+      </view>
+      
+      <view class='data-item'>
+        <view class='data-item-label'>
+          手机号码
+        </view>
+        <view class='data-item-info'>
+         13598745632
+        </view>
+      </view>
+      <view class='data-item' >
+        <view class='data-item-label'>
+          意向地区
+        </view>
+        <view class='data-item-info'>
+         西安市未央区
+        </view>
+      </view>
+      <view class='data-item' >
+        <view class='data-item-label'>
+          留言内容
+        </view>
+        <view class='data-item-info'>
+         无
+        </view>
+      </view>
+  </view>
+  
+</view>
+<view class='button-container'>
+  <block wx:if="{{order_style==1}}">
+    <button class='evaluate-btn' bindtap='redirectTo' data-url="../evaluate/index">去评价</button>
+  </block>
+  <block wx:if="{{order_style==0}}">
+    <!--未完成  -->
+    <button class='online-btn' bindtap='redirectTo' data-url="../order/index">退单</button>
+  </block>
+  <button class='online-btn' bindtap='callPhoneHandler' data-phone="13212341234">在线客服</button>
+</view>

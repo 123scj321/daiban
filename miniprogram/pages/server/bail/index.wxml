@@ -1,0 +1,20 @@
+<!--pages/server/bail/index.wxml-->
+<!--  用户支付页面  -->
+<view class='module-item'>
+  <view class='module-item-text'>
+    <view class='module-item-text-left'>
+      缴纳企业押金
+    </view>
+    <view class='renminbi'><image src="{{imgUrl}}bail-sign.png"></image> 1000</view>
+  </view>
+</view>
+<view>
+<button class='pay-button' bindtap='pay'>支付</button>
+<view class='module-item-text margin-top'>
+  <view class='title'>什么是保证金？</view>
+    <view class='context'>保证金也叫做企业押金，可增加用户的可信度，提高订单的成交率；</view>
+    <view class='context'>保证金可随时退，我们将在24小时之内退到微信账户。</view>
+  </view>
+</view>
+
+

@@ -1,0 +1,101 @@
+/* pages/server/bail/index.wxss */
+page{
+  font-family: "黑体";
+}
+.module-item{
+  width: 100%;
+  display: flex;
+  padding: 10rpx 0 0;
+  margin-bottom: 10rpx;
+  background: #fff;
+}
+.module-item-text{
+  width:400rpx;
+  margin:20rpx auto;
+}
+.module-item-text-left{
+  width:100%;
+  font-size: 30rpx;
+  color:#555555;
+  text-align: center;
+  margin-bottom:45rpx;
+}
+.renminbi{
+  width:100%;
+  font-size:75rpx;
+  color:#0291ec;
+  display: flex;
+  justify-content: center;
+}
+.renminbi image{
+  width:57rpx;
+  height: 59rpx;
+  margin-top:14rpx;
+}
+.pay-button{
+  width:690rpx;
+  height: 90rpx;
+  background:linear-gradient(to bottom,#4bb4f6,#0291ec) ;
+  color: #FFF;
+  line-height: 90rpx;
+  margin: 32rpx auto;
+  font-size:36rpx;
+}
+.outpay-button{
+  width:690rpx;
+  height: 90rpx;
+  border:2rpx solid #aaa;
+  line-height: 90rpx;
+  margin: 32rpx auto;
+  color:#aaa;background: transparent;
+  font-size:36rpx;
+}
+.green-text{
+  color:#20ad20;
+}
+.money-container{
+  width:588rpx;
+  margin:0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top:50rpx;
+}
+.money-container text{
+  margin-bottom: 40rpx;
+  display: block;
+  padding:12.5rpx 70rpx; 
+  color:#333333;
+  font-size:34rpx;
+  border:2rpx solid #333;
+  border-radius: 8rpx;
+}
+.money-container .active{
+   padding:12.5rpx 70rpx; 
+   color:#20ad20;
+   background: #c8f4c8;
+   font-size:34rpx;
+   display: block;
+   border:2rpx solid #20ad20;
+   border-radius: 8rpx;
+}
+.title{
+  font-size:32rpx;
+  color:#555;
+  line-height: 40rpx;
+  margin-top:90rpx;
+}
+.context{
+  font-size:28rpx;
+  color:#888888;
+  line-height: 30rpx;
+  margin-top:30rpx;
+}
+.margin-top{
+  width:700rpx;
+  margin:0 auto;
+  margin-top:50rpx;
+}
+.margin-left{
+margin-left: 40rpx;
+}

@@ -1,0 +1,98 @@
+/* pages/user/my-collect/index.wxss */
+page{
+  background: #f1f2f4;
+  font-family: "Adobe";
+}
+/* 推荐企业 */
+.resume{
+  width:100%;
+  background: #fff;
+  margin-top:20rpx;
+  padding-top:20rpx;
+}
+.resume .title{
+  width:700rpx;
+  margin:0rpx auto;
+  align-items: center;
+  display: flex;
+  padding-top:20rpx;
+  padding-bottom:20rpx;
+  justify-content: space-between;
+}
+.resume .title text{
+  font-size:32rpx;font-weight: bold;color:#333;
+}
+.resume .title image{
+  width:16rpx;
+  height: 30rpx;
+}
+.resume .list-container{
+  width:100%;
+}
+.resume .list-container .list-item{
+  width:700rpx;
+  display: flex;
+  margin:20rpx auto;
+}
+.resume .list-container .list-item .left{
+  width:150rpx;
+}
+.resume .list-container .list-item .left image{
+  width:120rpx;
+  height: 120rpx;
+}
+.resume .list-container .list-item .right{
+  width:550rpx;
+}
+.resume .list-container .list-item .right .title{
+  font-size:28rpx;
+  width:550rpx;
+  color:#333;
+  font-weight: bold;
+  padding:0;
+}
+.resume .list-container .list-item .right .subtitle{
+  font-size:24rpx;
+  margin-top:20rpx;
+  color:#888;
+  padding:0;
+}
+.resume .list-container .list-item .right .sign-container{
+  width:400rpx;
+  display: flex;
+  border-radius: 5rpx;
+  margin-top:20rpx;
+  flex-wrap: wrap;
+  position: relative;
+}
+.resume .list-container .list-item .right .sign-container .delete-btn{
+  position: absolute;
+  right:-130rpx;
+}
+.resume .list-container .list-item .right .sign-container .delete-btn image{
+  width:38rpx;
+  height: 38rpx;
+}
+.resume .list-container .list-item .right .sign-container text{
+  display: block;
+  font-size:22rpx;
+  padding:2rpx 10rpx;
+  margin-right: 10rpx;
+}
+.resume .list-container .list-item .right .sign-container .y{
+  color:#ff9833;
+  background: #fff4ea;
+}
+.resume .list-container .list-item .right .sign-container .r{
+  color:#ee3112;
+  background: #fdeae7;
+}
+.resume .list-container .list-item .right .sign-container .b{
+  color:#0090ec;
+  background: #eaf1ff;
+}
+
+
+.border-top{
+  border-top:2rpx solid #ddd;
+}

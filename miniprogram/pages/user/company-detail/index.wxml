@@ -1,0 +1,308 @@
+<!--pages/user/company-detail/index.wxml-->
+<!-- 头部信息 -->
+<view class='user-face-module'>
+  <view class='user-container'>
+    <view class='user-face'>
+      <image src='{{imgUrl}}style.png' />
+    </view>
+    <view class='user-info'>
+      <view class='info nickname'>
+        <text bindtap='navToUser' >西安比邻财务管理咨询有限公司</text>
+      </view>
+      <view class='info phone'>
+        <text bindtap='navToUser'>更新时间：今天</text>
+        <text bindtap='navToUser'>关注人数：2137</text>
+      </view>
+      <view class='info confidence'>
+        <text bindtap='navToUser'>信用分： <text class='red'> 4.9</text></text>
+        <text bindtap='navToUser'>服务分：<text class='red'> 4.8</text></text>
+        <text bindtap='navToUser'>满意度：<text class='red'> 98%</text></text>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 营业执照 -->
+<view class='module-context'>
+  <view class='left'>
+    <image src="{{imgUrl}}right.png"></image>
+    <text>今日完成订单</text>
+  </view>
+  <view class='right'>
+    <image src="{{imgUrl}}right.png"></image>
+    <text>订单收入（元）</text>
+  </view>
+</view>
+<!-- 企业信息 -->
+<view class='list-item'>
+  <view class='teacher-abstract'>
+    <icon></icon> 企业信息
+  </view>
+  <view class='border-top'></view>
+  <view  class='text-box'>
+    <text class='title'> 企业类型</text>
+    <text class='context'>工商年检；全程代理；注册地址；</text>
+  </view>
+  <view  class='text-box'>
+    <text class='title'> 服务区域</text>
+    <text class='context'>高新区 雁塔区 莲湖区 新城区 曲江新区 碑林区 灞桥区 沣渭新区</text>
+  </view>
+  <view  class='text-box'>
+    <text class='title'> 联系人</text>
+    <text class='context'>王经理</text> 
+  </view>
+  <view  class='text-box'>
+    <text class='title'> 商家地址</text>
+    <text class='address'>未央区凤城二路海洋大厦201号 <text class='addressclick' bindtap="look_address">查看位置</text></text> 
+  </view>
+</view>
+<!-- 服务信息 -->
+<view class='list-item'>
+  <view class='teacher-abstract'>
+    <icon></icon> 服务介绍
+  </view>
+  <view class='border-top'></view>
+  <view  class='text'>西安比邻财务管理咨询有限公司是一家专业从事企业资质新办、延期、增项、升级、资质转让等服务的专业公司，我们拥有丰富的人力资源及人脉关系。我们为企业代办各类建筑施工及设计资质，为客户简化条件、缩短时间、节省费用，在较短的时间合理的预算内为客户提供完美的解决方案。</view>
+  <view  class='text-box'>工商注册：</view>
+  <view  class='text-box'><text> 1、</text>金融服务公司、资产管理公司、投资公司、集团公司
+  注册、实业公司注册。</view>
+  <view  class='text-box'><text> 2、</text>公司变更、地址变更、经营范围变更、名称变更、股
+  东变更。</view>
+  <view  class='text-box'><text> 3、</text>中字头、无行业、无区域公司名称核准。</view>
+  <view  class='text-box'><text> 4、</text>社保开户、公积金开户、代缴社保。</view>
+  <view  class='text-box'><text> 5、</text>审计报告、验资报告。 </view>
+  <view  class='text-box'><text> 6、</text>指定公司名称核准、提供注册地址，加急当天出照。</view>
+  <view class='border-top'></view>
+</view>
+<!-- 服务流程 -->
+<view class='list-item'>
+  <view class='teacher-abstract'>
+    <icon></icon> 服务流程
+  </view>
+  <view class='border-top'></view>
+  <view class='server-img-top'>
+    <image src="{{imgUrl}}server-01.png"></image>
+  </view>
+  <view class='server-img-bottom-context'>
+    <view class='server-item'>
+      <text class='title'>核名</text>
+      <text class='subtitle'>（身份证信息及公司信息）</text>
+    </view>
+    <view class='server-item'>
+      <text class='title'>工商登记</text>
+      <text class='subtitle'>（由我司人员代跑）</text>
+    </view>
+    <view class='server-item'>
+      <text class='title'>完成订单</text>
+      <text class='subtitle'>（领取三证合一的营业执照，法人章，财务章）</text>
+    </view>
+  </view>
+</view>
+<!-- 用户点评 -->
+<view class='list-item'>
+  <view class='teacher-abstract'>
+    <icon></icon> 用户点评
+  </view>
+  <view class='border-top'></view>
+  <view class='teacher-list'>
+  <!-- 教师列表 -->
+  <view class='teacher-item'>
+    <view class='left'>
+      <image src="{{imgUrl}}avatar.png" class='avatar'></image>
+    </view>
+    <view class='right'>
+      <view class='top'>
+        <text class='nickname'>134********</text>
+        <text class='time'>2018-08-13</text> 
+      </view>
+       <!-- 等级星 -->
+        <view class='confindence-img'>
+          <image src="{{imgUrl}}small-star.png" bindtap="show_this" data-num="1"></image>
+          <image src="{{imgUrl}}small-star.png" bindtap="show_this" data-num="2"></image>
+          <image src="{{imgUrl}}small-star.png" bindtap="show_this" data-num="3"></image> 
+          <image src="{{imgUrl}}small-star-01.png" bindtap="show_this" data-num="4"></image>
+          <image src="{{imgUrl}}small-star-01.png" bindtap="show_this" data-num="5"></image>
+        </view>
+      <view class='teacher-detail'>
+        <text>专业，沟通融洽，电话相应及时，价格还挺满意。</text>
+      </view>
+    </view>
+  </view> 
+  <view class='border-top'></view>
+  <!-- copy -->
+  <view class='teacher-item'>
+    <view class='left'>
+      <image src="{{imgUrl}}avatar.png" class='avatar'></image>
+    </view>
+    <view class='right'>
+      <view class='top'>
+        <text class='nickname'>134********</text>
+        <text class='time'>2018-08-13</text> 
+      </view>
+       <!-- 等级星 -->
+        <view class='confindence-img'>
+          <image src="{{imgUrl}}small-star.png" bindtap="show_this" data-num="1"></image>
+          <image src="{{imgUrl}}small-star.png" bindtap="show_this" data-num="2"></image>
+          <image src="{{imgUrl}}small-star.png" bindtap="show_this" data-num="3"></image> 
+          <image src="{{imgUrl}}small-star-01.png" bindtap="show_this" data-num="4"></image>
+          <image src="{{imgUrl}}small-star-01.png" bindtap="show_this" data-num="5"></image>
+        </view>
+      <view class='teacher-detail'>
+        <text>专业，沟通融洽，电话相应及时，价格还挺满意。</text>
+      </view>
+    </view>
+  </view> 
+  <!-- copy-end -->
+  <view class='more-btn' bindtap='into_next_page' data-url="../evaluate/index">
+    查看更多
+  </view>
+</view> 
+</view>
+
+<!-- 服务保障 -->
+<view class='list-item'>
+  <view class='teacher-abstract'>
+    <icon></icon> 服务保障
+  </view>
+  <view class='border-top'></view>
+  <view class='server-safe-context'>
+    <view class='server-item'>
+      <view class='server-top'>
+        <image src="{{imgUrl}}server-02.png"></image>
+      </view>
+      <text class='title'>核名</text>
+      <text class='subtitle'>与商家所有交流保留有证据（交易记录与收款收据）</text>
+    </view>
+    <view class='server-item'>
+      <view class='server-top'>
+        <image src="{{imgUrl}}server-03.png"></image>
+      </view>
+      <text class='title'>核名</text>
+      <text class='subtitle'>有保障期的服务请与商家确定保障实效</text>
+    </view>
+  </view>
+</view>
+
+
+<!-- 底部导航 -->
+<view style='height:108rpx;'></view>
+<view class='footer'>
+  <form report-submit='true' class='item' bindtap='handler_next_page' data-url="../class-look/index">
+    <button bindtap='collect_btn'>
+      <block wx:if="{{!collect}}">
+        <image src="{{imgUrl}}collect-01.png" style="width:38rpx;height:37rpx;"></image>
+        <text>收藏</text>
+      </block>
+      <block wx:else>
+        <image src="{{imgUrl}}collect.png" style="width:38rpx;height:37rpx;"></image>
+        <text style="color:#ff9233;">收藏</text>
+      </block>
+    </button>
+  </form>
+  <form report-submit='true' class='item' bindtap='handler_next_page' data-url="../class-look/index">
+    <button open-type="share" type="primary">
+      <image src="{{imgUrl}}transfer.png" style="width:46rpx;height:36rpx;"></image>
+      <text >转发</text>
+    </button>
+  </form>
+  <form bindsubmit='open_message' class='item-right' >
+    <button formType="submit">
+      <text>留言</text>
+    </button>
+  </form>
+  <form report-submit='true' class='item-right' >
+    <button bindtap='callPhoneHandler' data-phone="13212341234">
+      <text>联系商家</text>
+    </button>
+  </form>
+</view>
+
+
+
+<!-- 留言 （遮罩层） -->
+<view class='appointment-plan' hidden='{{showAppointment}}' style='left:{{appointment_left}}rpx'>
+  <view class='appointment-plan-container'>
+      <!-- 标题 -->
+      <view class='title-top'>
+        <text class='appointment-title'>在线留言</text>
+        <text class='appointment-subtitle'>（3小时内商家会联系您）</text>
+      </view>
+      <image src="http://xyds.4hl.cn/xyds/uploads/otherimg/index/icon-28.png" class='cancleHandler' bindtap='cancleAppointment'></image>
+      <!-- 上面部分 -->
+      <view class='module-container'>
+        <!-- 昵称 -->
+        <view class='module-list-item'>
+          <view class='input-container'>
+            <view class='label'> 姓名:</view>
+            <view class='input-container'>
+              <input placeholder='怎么称呼您' bindchange='get_name'  value="{{name}}"></input>
+            </view>
+          </view>
+        </view>
+        <!-- 电话 -->
+        <view class='module-list-item'>
+          <view class='input-container'>
+            <view class='label'>联系方式：</view>
+            <view class='input-container'>
+              <input placeholder='请您输入电话号码，方便我们联系您' bindchange="get_phone" value="{{phone}}"></input>
+              
+            </view>
+          </view>
+        </view>
+        <!-- 验证码 -->
+        <view class='module-list-item'>
+          <view class='input-container'>
+            <view class='label'>验证码：</view>
+            <view class='input-container-yanzhengma'>
+              <input placeholder='请输入验证码' bindchange="verificationinput" value="{{verificationcode}}"></input>
+              <block wx:if="{{gettingCode}}">
+                <button class='yanzhengma' bindtap='sendcode'>获取验证码</button>
+              </block>
+              <block wx:else>
+                <button class='active'>{{sendtxt}}</button>
+              </block>
+            </view>
+          </view>
+        </view>
+        <!-- 意向城市 -->
+        <view class='module-list-item'>
+          <view class='input-container'>
+            <view class='label'>意向城市：</view>
+            <view class='input-container'>
+              <input placeholder='西安' bindchange="get_address" value="{{address}}"></input>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class='prompit'>
+        <text>我们平台不会泄露您的个人信息，请您放心填写</text>
+      </view>
+       <!-- 下面部分 -->
+      <view class='module-container'>
+        <!-- 代办项目 -->
+        <view class='module-list-item'>
+          <view class='input-container'>
+            <view class='label'> 代办项目:</view>
+            <view class='list-item'>
+              <block wx:for="{{agent_project}}" wx:key="{{agent_project}}" wx:index="index">
+                <text class='{{item.status?"active":"list-item-btn"}}' bindtap='choose_project' data-id="{{index}}">{{item.title}}</text>
+              </block>
+            </view>
+          </view>
+        </view>
+        <!-- 留言内容 -->
+        <view class='module-list-item'>
+          <view class='input-container'>
+            <view class='label'>留言内容：</view>
+            <view class='input-container'>
+              <input placeholder='请简要说明您的需求（选填）' value="{{message}}" bindchange="get_message"></input>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class='pay-number'>
+        <button bindtap='submit_btn'>提交</button>
+      </view>
+  </view>
+</view>
+
+

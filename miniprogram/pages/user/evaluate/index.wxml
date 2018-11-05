@@ -1,0 +1,45 @@
+<!--pages/user/evaluate/index.wxml-->
+<view class='evaluate'>
+  <view class='title'>您觉得我们的服务怎么样</view>
+  <view class="chose_star">
+    <block wx:for="{{evaluate.server_star}}" wx:key="{{evaluate.server_star}}" wx:index="index">
+      <image class="star" src="{{item}}" bindtap="server_star_handler" data-num="{{index}}" data-type="server"></image>
+    </block>
+  </view>
+  <view class='border-top'></view>
+  <view class='evaluate-container'>
+    <textarea placeholder='有什么想补充的？' rows="5" bindchange="get_context" value="{{context}}">
+    </textarea>
+  </view>
+  <view class='confindence'>
+    <text>商家信用</text>
+    <view class='confindence-img'>
+      <block wx:for="{{evaluate.busness_confidence_star}}" wx:key="{{evaluate.busness_confidence_star}}" wx:index="index">
+        <image src="{{item}}" bindtap="server_star_handler" data-num="{{index}}" data-type="busness_confidence"></image>
+      </block>
+      <!-- <image src="{{imgUrl}}small-star.png" bindtap="show_this" data-num="1"></image>
+      <image src="{{imgUrl}}small-star.png" bindtap="show_this" data-num="2"></image>
+      <image src="{{imgUrl}}small-star.png" bindtap="show_this" data-num="3"></image> 
+      <image src="{{imgUrl}}small-star-01.png" bindtap="show_this" data-num="4"></image>
+      <image src="{{imgUrl}}small-star-01.png" bindtap="show_this" data-num="5"></image> -->
+    </view>
+  </view>
+  <view class='confindence'>
+    <text>商家服务</text>
+    <view class='confindence-img'>
+      <block wx:for="{{evaluate.business_server_star}}" wx:key="{{evaluate.business_server_star}}" wx:index="index">
+        <image src="{{item}}" bindtap="server_star_handler" data-num="{{index}}" data-type="business_server"></image>
+      </block>
+      <!-- <image src="{{imgUrl}}small-star.png" bindtap="show_this" data-num="1"></image>
+      <image src="{{imgUrl}}small-star.png" bindtap="show_this" data-num="2"></image>
+      <image src="{{imgUrl}}small-star.png" bindtap="show_this" data-num="3"></image> 
+      <image src="{{imgUrl}}small-star-01.png" bindtap="show_this" data-num="4"></image>
+      <image src="{{imgUrl}}small-star-01.png" bindtap="show_this" data-num="5"></image> -->
+    </view>
+  </view>
+</view>
+
+
+<button class='btn' bindtap='submit_btn'>匿名提交</button>
+<view class='evaluate-text'>您的评价有助于我们更好的改善我们的平台</view>
+

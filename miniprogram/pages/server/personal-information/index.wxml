@@ -1,0 +1,139 @@
+<!--pages/server/personal-information/index.wxml-->
+<!--  banner 信息 -->
+<view class='container'>
+  <view class='page-content'>
+    <view class='user-face-module'>
+      <view class='user-face'>
+        <image  src='{{imgUrl}}avatar.png'/>
+      </view>
+      <view class='user-info'>
+        <view class='info'>
+          <text bindtap='navToUser' >西安比邻财务管理有限公司</text>
+        </view>
+        <view class='name'>
+          <text bindtap='navToUser' >王经理</text>
+        </view>
+        <view class='phone'>
+          <text bindtap='navToUser' >152 000 0000</text>
+        </view>
+      </view>
+    </view>
+    <view class='border-top'></view>
+    <!-- 用户内容 -->
+    <view class='user-information'>
+      <view class='item' bindtap='formSubmit' data-url='../notice/index'>
+        <text>2306</text>
+        <text>粉丝</text>
+      </view>
+      <view class='item' bindtap='formSubmit' data-url='../order/index'>
+        <text>56</text>
+        <text>订单</text>
+      </view>
+      <view class='item' bindtap='formSubmit' data-url='../message-first/index'>
+        <text>2306</text>
+        <text>留言</text>
+      </view>
+    </view>
+    <!-- 个人列表内容 -->
+    <view class='nav-module'>
+      <navigator url='../member/index' class='nav-item'>
+        <view>
+          <image src='{{imgUrl}}pi-01.png' class='nav-icon'></image>
+          <text>我的会员</text>
+        </view>
+        <view>
+          <image  src='{{imgUrl}}more05.png' class='nav-flag'></image>
+        </view>
+      </navigator>
+      <navigator url='../authority-second/index' class='nav-item'>
+        <view>
+          <image src='{{imgUrl}}pi-02.png' class='nav-icon'></image>
+          <text>企业认证</text>
+        </view>
+        <view>
+          <image  src='{{imgUrl}}more05.png' class='nav-flag'></image>
+        </view>
+      </navigator>
+      <navigator url='../evaluate/index' class='nav-item'>
+        <view>
+          <image src='{{imgUrl}}pi-03.png' class='nav-icon'></image>
+          <text>我的评价</text>
+        </view>
+        <view>
+          <image  src='{{imgUrl}}more05.png' class='nav-flag'></image>
+        </view>
+      </navigator>
+      <navigator url='../news/index' class='nav-item'>
+        <view>
+          <image src='{{imgUrl}}pi-04.png' class='nav-icon'></image>
+          <text>消息提醒</text>
+        </view>
+        <view>
+          <image  src='{{imgUrl}}more05.png' class='nav-flag'></image>
+        </view>
+      </navigator>
+    </view>
+
+
+    <view class='nav-module'>
+      <navigator url='../bail/index' class='nav-item'>
+        <view>
+          <image src='{{imgUrl}}pi-05.png' class='nav-icon' style='width:70rpx;height:122rpx;'></image>
+          <text>保证金</text>
+        </view>
+        <view>
+          <image  src='{{imgUrl}}more05.png' class='nav-flag'></image>
+        </view>
+      </navigator>
+      <navigator url='../knowledge/index' class='nav-item'>
+        <view>
+          <image src='{{imgUrl}}pi-06.png' class='nav-icon' style='width:70rpx;height:102rpx;'></image>
+          <text>入驻须知</text>
+        </view>
+        <view>
+          <image  src='{{imgUrl}}more05.png' class='nav-flag'></image>
+        </view>
+      </navigator>
+    </view>
+    <!-- 我的客服 -->
+    <view class='nav-module' bindtap='callPhone' data-phone="13212341234">
+      <navigator class='nav-item'>
+        <view>
+          <image src='{{imgUrl}}pi-07.png' class='nav-icon' style='width:74rpx;height:80rpx;'></image>
+          <text>联系客服</text>
+        </view>
+        <view>
+          400-000-0000
+        </view>
+      </navigator>
+    </view>
+  </view>
+</view>
+<!-- 底部导航 -->
+<view style='height:108rpx;'></view>
+<view class='footer'>
+  <form bindsubmit='footer_handler' report-submit='true' class='item'  data-url="../index/index">
+    <button formType="submit">
+      <image src="{{imgUrl}}home-01.png" style="width:40rpx;"></image>
+      <text>首页</text>
+    </button>
+  </form>
+  <form bindsubmit='formSubmit' report-submit='true' class='item' data-url="../launch/index">
+    <button formType="submit">
+      <image src="{{imgUrl}}launch-01.png" style="width:40rpx;"></image>
+      <text >发布</text>
+    </button>
+  </form>
+  <form bindsubmit='footer_handler' report-submit='true' class='item' data-url="../personal-information/index">
+    <button formType="submit">
+      <image src="{{imgUrl}}my.png"></image>
+      <text class='active'>我的</text>
+    </button>
+  </form>
+  <form bindsubmit='footer_handler' report-submit='true' class='item' data-url="../../user/index/index">
+    <button formType="submit">
+      <image src="{{imgUrl}}user-01.png"></image>
+      <text>用户</text>
+    </button>
+  </form>
+</view>

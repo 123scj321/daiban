@@ -1,0 +1,165 @@
+/* pages/user/search/index.wxss */
+/* 搜索框 */
+.search-nav{
+  width:700rpx;
+  margin:15rpx auto;
+  background: #fff;
+  display: flex;
+  padding-top:5rpx;
+  padding-bottom:10rpx;
+}
+.more-city{
+  width:140rpx;
+  margin-left:25rpx;
+  height: 60rpx;
+  align-items: center;
+  font-size:28rpx;
+  line-height: 60rpx;
+  color:#888888;
+  }
+.more-city image{
+  width:17rpx;
+  height: 10rpx;
+  display: inline-block;
+  margin-left:20rpx;
+}
+.search-container{
+  width:550rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-radius: 120rpx;
+  background: #f4f4f4;
+  display: flex;
+}
+.search-container image{
+  width: 25rpx;
+  height: 24rpx;
+  margin-top:20rpx;
+  margin-left:45rpx;
+}
+.search-container input{
+  width:560rpx;
+  font-size:24rpx;
+  color:#a6a6a6;
+  margin-left:20rpx;
+  margin-top:4rpx;
+}
+/* 所搜列表 */
+/* 筛选列表 */
+.classic-container{
+  width:100%;
+  background: #fff;
+  height: 80rpx;
+  display: flex;
+  justify-content: space-between;
+  margin:0 auto;
+}
+.classic-container .classic-item{
+  width:220rpx;
+  height: 80rpx;
+  border-radius: 100rpx;
+  font-size:28rpx;
+  color:#333;
+  text-align: center;
+  /* line-height: 80rpx; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.classic-container .classic-item .active{
+  color:#0090ec;
+}
+.classic-container .classic-item image{
+  display: block;
+  width:11rpx;
+  height: 7rpx;
+  margin-left:10rpx;
+}
+/*evaluateContextContainer  */
+.evaluateContextContainer{
+  background: #fff;
+  width:100%;
+  min-height: 800rpx;
+  margin-top:20rpx;
+}
+.evaluateContextButtonList{
+  width:700rpx;
+  margin:0rpx auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: left;
+  font-size:24rpx;
+  color:#555555;
+}
+.evaluateContextButtonItem{
+  background: #f2f2f2;
+  padding:8rpx 30rpx;
+  border-radius: 15rpx;
+  margin:10rpx 10rpx 10rpx 0rpx;
+}
+.borderTop{
+  width:100%;
+  height: 2rpx;
+  border-top:2rpx solid #d2d2d2;
+}
+.evaluateContextList{
+  width:700rpx;
+  margin: 0 auto;
+  font-size:24rpx;
+  color:#333;
+}
+.evaluateContextTitle{
+  width:700rpx;
+  margin: 30rpx auto;
+  font-size:30rpx;
+  font-weight: bold;
+  color:#555555;
+}
+.evaluateContextItem{
+  display: flex;
+  justify-content: space-between;
+  font-size:28rpx;
+  line-height: 40rpx;
+  padding-top: 40rpx;
+  
+}
+.phoneAndText{
+  max-width: 560rpx;
+}
+.time{
+  color:#888;
+}
+
+
+.audio-nav{
+  width:700rpx;
+  margin:15rpx auto;
+  background: #fff;
+  display: flex;
+  padding-top:5rpx;
+  padding-bottom:10rpx;
+}
+.audio-container{
+  width:550rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-radius: 120rpx;
+  background: #f4f4f4;
+  display: flex;
+  justify-content: center;
+}
+.audio-container::after{
+  border:none;
+}
+.audio-container image{
+  width: 22rpx;
+  height: 32rpx;
+  margin-top:20rpx;
+  margin-left:45rpx;
+}
+.audio-container text{
+  font-size:24rpx;
+  color:#a6a6a6;
+  margin-left:10rpx;
+  margin-top:4rpx;
+}

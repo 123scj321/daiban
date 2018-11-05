@@ -1,0 +1,90 @@
+<!--pages/server/index/index.wxml-->
+<!-- 头部导航 -->
+<view class='header'>
+  <view class='top'>
+    <view class='title'>
+      <text>数据统计：</text>2018年01月 — 02月
+    </view>
+  </view>
+  <view class='bottom'>
+    <view class='item' bindtap='formSubmit' data-url="../order/index">
+      <text>12</text>
+      <text>完成订单(单)</text>
+    </view>
+    <view class='item' bindtap='formSubmit' data-url="../order/index">
+      <text>12</text>
+      <text>我的订单(单)</text>
+    </view>
+    <view class='item' bindtap='formSubmit' data-url="../notice/index">
+      <text>12</text>
+      <text>关注我的(个)</text>
+    </view>
+  </view>
+</view>
+<!-- 通知  -->
+<view  class='hot_resuorce'>
+  <view class='left'>
+    <image src='{{imgUrl}}system_notice.png'></image>
+  </view>
+  <view class='right'>
+    <swiper class='sys-notify' vertical="true" circular="true" autoplay="autoplay">
+      <navigator  wx:for='{{notice}}' wx:key='{{notice}}' >
+        <swiper-item class="sys-notify-item">
+          <text>{{item.title}}</text>
+        </swiper-item>
+      </navigator>
+    </swiper>
+  </view>
+</view>
+<!-- 新闻中心 -->
+<view class='resume'>
+  <view class='main-title'>
+    <text>新闻中心</text>
+  </view>
+  <view class='border-top'></view>
+  <view class='list-container'>
+    <block wx:for="{{news_list}}" wx:key="{{news_list}}" wx:index="index">
+    <view class='list-item' bindtap='formSubmit' data-url="../selected-topics-detail/index">
+      <view class='right'>
+        <view class='title'>变更三证合一后，还需办理哪些事项，我们还需要办理其余的各项事物变更三证合一后</view>
+        <view class='subtitle'>
+          <text>2018-01-01</text>
+          <!-- <text>56收藏</text> -->
+        </view>
+      </view>
+      <view class='left'>
+        <image src="{{imgUrl}}news-01.png"></image>
+      </view>
+    </view>
+    <view class='border-top'></view>
+    </block>
+  </view>
+</view>
+ <!-- 底部导航 -->
+<view style='height:108rpx;'></view>
+<view class='footer'>
+  <form bindsubmit='footer_handler' report-submit='true' class='item'  data-url="../index/index">
+    <button formType="submit">
+      <image src="{{imgUrl}}home.png" style="width:40rpx;"></image>
+      <text class='active'>首页</text>
+    </button>
+  </form>
+  <form bindsubmit='formSubmit' report-submit='true' class='item' data-url="../launch/index">
+    <button formType="submit">
+      <image src="{{imgUrl}}launch-01.png" style="width:40rpx;"></image>
+      <text >发布</text>
+    </button>
+  </form>
+  <form bindsubmit='footer_handler' report-submit='true' class='item' data-url="../personal-information/index">
+    <button formType="submit">
+      <image src="{{imgUrl}}my-01.png"></image>
+      <text>我的</text>
+    </button>
+  </form>
+  <form bindsubmit='footer_handler' report-submit='true' class='item' data-url="../../user/index/index">
+    <button formType="submit">
+      <image src="{{imgUrl}}user-01.png"></image>
+      <text>用户</text>
+    </button>
+  </form>
+</view>

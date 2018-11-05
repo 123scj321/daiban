@@ -1,0 +1,150 @@
+<!--pages/user/selected-topics/index.wxml-->
+<!-- 订单列表 -->
+<view class='container'>
+  <view class='page-content'>
+    <view class='switch-panel'>
+      <view class='switch-panel-title'>
+        <view class='switch-panel-title-item {{currentItemId ==index ? "active" : ""}}' bindtap='selectSwiper' data-listid="{{index}}" wx:for="{{select_topics}}" wx:key="{{select_topics}}" wx:index="index">
+          <text>{{item.title}}</text>
+        </view>
+        <!-- <view class='switch-panel-title-item {{currentItemId =="0" ? "active" : ""}}' bindtap='selectSwiper' data-listid="0">
+          <text>推荐</text>
+        </view>
+        <view class='switch-panel-title-item {{currentItemId =="1" ? "active" : ""}}' bindtap='selectSwiper' data-listid="1">
+          <text>企业服务</text>
+        </view>
+        <view class='switch-panel-title-item {{currentItemId =="2" ? "active" : ""}}' bindtap='selectSwiper' data-listid="2">
+          <text>创业必备</text>
+        </view>
+        <view class='switch-panel-title-item {{currentItemId =="3" ? "active" : ""}}' bindtap='selectSwiper' data-listid="3">
+          <text>居家生活</text>
+        </view> -->
+      </view>
+      <swiper current-item-id="{{currentItemId}}" class='switch-panel-swiper' bindchange='changeSwiper'>
+        <block wx:for="{{select_topics}}" wx:key="{{select_topics}}" wx:index="index">
+          <swiper-item item-id="{{index}}">
+            <scroll-view scroll-y="true" class='switch-panel-content' bindscrolltolower="refreshData" data-type='0' data-index="1">
+              <view class='resume'>
+                <view class='border-top'></view>
+                <view class='list-container'>
+                  <block wx:for="{{item.data}}" wx:key="{{item.data}}" wx:index="index">
+                  <view class='list-item' bindtap='formSubmit' data-url="../selected-topics-detail/index">
+                    <view class='right'>
+                      <view class='title'>变更三证合一后，还需办理哪些事项，我们还需要办理其余的各项事物变更三证合一后</view>
+                      <view class='subtitle'>
+                        <text>5小时前</text>
+                        <text>56收藏</text>
+                      </view>
+                    </view>
+                    <view class='left'>
+                      <image src="{{imgUrl}}item01.png"></image>
+                    </view>
+                  </view>
+                  <view class='border-top'></view>
+                  </block>
+                </view>
+              </view>
+            </scroll-view>
+          </swiper-item>
+        </block>
+        <!-- 待接单  -->
+        <!-- <swiper-item item-id="0">
+          <scroll-view scroll-y="true" class='switch-panel-content' bindscrolltolower="refreshData" data-type='0' data-index="1">
+            <view class='resume'>
+              <view class='border-top'></view>
+              <view class='list-container'>
+                <block wx:for="">
+                <view class='list-item'>
+                  <view class='right'>
+                    <view class='title'>变更三证合一后，还需办理哪些事项，我们还需要办理其余的各项事物变更三证合一后</view>
+                    <view class='subtitle'>
+                      <text>5小时前</text>
+                      <text>56收藏</text>
+                    </view>
+                  </view>
+                  <view class='left'>
+                    <image src="{{imgUrl}}item01.png"></image>
+                  </view>
+                </view>
+                <view class='border-top'></view>
+                </block>
+              </view>
+            </view>
+          </scroll-view>
+        </swiper-item> -->
+        <!-- 已完成  -->
+        <!-- <swiper-item item-id="1">
+          <scroll-view scroll-y="true" class='switch-panel-content' bindscrolltolower="refreshData" data-type='2' data-index="3">
+           <view class='resume'>
+              <view class='border-top'></view>
+              <view class='list-container'>
+                <view class='list-item'>
+                  <view class='right'>
+                    <view class='title'>变更三证合一后，还需办理哪些事项，我们还需要办理其余的各项事物变更三证合一后</view>
+                    <view class='subtitle'>
+                      <text>5小时前</text>
+                      <text>56收藏</text>
+                    </view>
+                  </view>
+                  <view class='left'>
+                    <image src="{{imgUrl}}item01.png"></image>
+                  </view>
+                </view>
+                <view class='border-top'></view>
+              </view>
+            </view>
+          
+          </scroll-view>
+        </swiper-item> -->
+        <!-- 已取消  -->
+        <!-- <swiper-item item-id="2">
+          <scroll-view scroll-y="true" class='switch-panel-content' bindscrolltolower="refreshData" data-type='2' data-index="3">
+            <view class='resume'>
+              <view class='border-top'></view>
+              <view class='list-container'>
+                <view class='list-item'>
+                  <view class='right'>
+                    <view class='title'>变更三证合一后，还需办理哪些事项，我们还需要办理其余的各项事物变更三证合一后</view>
+                    <view class='subtitle'>
+                      <text>5小时前</text>
+                      <text>56收藏</text>
+                    </view>
+                  </view>
+                  <view class='left'>
+                    <image src="{{imgUrl}}item01.png"></image>
+                  </view>
+                </view>
+                <view class='border-top'></view>
+              </view>
+            </view>
+          
+          </scroll-view>
+        </swiper-item> -->
+        <!-- 已取消  -->
+        <!-- <swiper-item item-id="3">
+          <scroll-view scroll-y="true" class='switch-panel-content' bindscrolltolower="refreshData" data-type='2' data-index="3">
+            <view class='resume'>
+              <view class='border-top'></view>
+              <view class='list-container'>
+                <view class='list-item'>
+                  <view class='right'>
+                    <view class='title'>变更三证合一后，还需办理哪些事项，我们还需要办理其余的各项事物变更三证合一后</view>
+                    <view class='subtitle'>
+                      <text>5小时前</text>
+                      <text>56收藏</text>
+                    </view>
+                  </view>
+                  <view class='left'>
+                    <image src="{{imgUrl}}item01.png"></image>
+                  </view>
+                </view>
+                <view class='border-top'></view>
+              </view>
+            </view>
+          
+          </scroll-view>
+        </swiper-item> -->
+      </swiper>
+    </view>
+  </view>
+</view>

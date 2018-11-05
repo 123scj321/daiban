@@ -1,0 +1,37 @@
+/* pages/user/question-reback/index.wxss */
+.advise-module{
+  width: 710rpx;
+  margin: 0 auto;
+  
+}
+.user-advise{
+  position: relative;
+  font-size: 26rpx;
+}
+.user-advise textarea{
+  width: 670rpx;
+  height: 260rpx;
+  background: #FFF;
+  color: #202020;
+  margin: 20rpx auto 50rpx;
+  padding: 20rpx;
+}
+.user-tip{
+  position: absolute;
+  bottom: 20rpx;
+  right: 20rpx;
+  color: #ababab;
+}
+.advise-module .btn{
+  width:700rpx;
+  margin:0 auto;
+  background: #27a2f1;
+  color:#fff;
+  border-radius: 15rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  margin-top:40rpx;
+}
+.advise-module .btn::after{
+  border:none;
+}

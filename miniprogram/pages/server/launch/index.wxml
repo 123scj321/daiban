@@ -1,0 +1,70 @@
+<!--pages/server/launch/index.wxml-->
+<!-- 基础信息 -->
+<view class='module-item'>
+  <view class='teacher-abstract'>
+    <icon></icon> 基础信息
+  </view>
+  <view class='border-bottom'></view>
+  <view class='item'>
+    <view class='title'>
+      <text>服务标题：</text>
+    </view>
+    <view class='context'>
+      <input placeholder='请您输入服务标题' bindchange='get_serverTitle' value='{{serverTitle}}'></input>
+    </view>
+  </view>
+  <view class='border-bottom'></view>
+  <view class='item' bindtap='formSubmit' data-url="../launch-style/index">
+    <view class='title'>
+      <text>类型：</text>
+    </view>
+    <view class='context'>
+      <view class='style-context'>
+        <block wx:if="{{serverStyle==''}}">
+          <text>请选择服务种类（最多选择五种）</text>
+        </block>
+        <block wx:else>
+          <text>{{serverStyle}}</text>
+        </block>
+      </view>
+      <image src="{{imgUrl}}more05.png" class='more'></image>
+    </view>
+  </view>
+  <view class='border-bottom'></view>
+  <view class='item'>
+    <view class='title'>
+      <text>服务区域：</text>
+    </view>
+    <view class='context'>
+      <input placeholder='请输入您的服务区域' bindchange='get_address' value='{{address}}'></input>
+    </view>
+  </view>
+  <view class='border-bottom'></view>
+</view>
+<!-- 服务信息 -->
+<view class='module-item'>
+  <view class='teacher-abstract'>
+    <icon></icon> 服务信息
+  </view>
+  <view class='border-bottom'></view>
+  <view class='carmer-context'>
+    <textarea placeholder='请输入您的企业介绍......' class='information' rows='3' bindinput='get_companyResume' value='{{companyResume}}'></textarea>
+    <block wx:if="{{companyResumeImg==''}}">
+      <image src="{{imgUrl}}photo.png" class='carmer' bindtap='get_upload_image'></image>
+    </block>
+    <block wx:else>
+      <image src="{{companyResumeImg}}" class='carmerAcitve' bindtap='delete_upload_image'></image>
+    </block>
+  </view>
+  <view class='border-bottom'></view>
+</view>
+<view class='module-item-text margin-top'>
+  <view class='title'>发布须知：</view>
+  <view class='context'>1.每天可免费发帖1条。</view>
+  <view class='context'>2.根据广告法的相关规定，请不要在发布内容中使用过分夸大的词句。</view>
+  <view class='context'>3.发布的内容需遵守国家法律法规，一经发现将追究责任。</view>
+</view>
+
+<view class='btn-container'>
+  <button bindtap='launch_handler'>发布</button>
+</view>

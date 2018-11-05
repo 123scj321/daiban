@@ -1,0 +1,202 @@
+<!--index.wxml-->
+<!-- 搜索 -->
+<view class='search-nav' id="{{scrollTop&&'fixed-top'}}">
+<!-- 选择更多城市 -->
+  <view class='more-city'>
+    <!-- <picker bindchange="bindPickerChange" value="{{index}}" range="{{province_city}}"> -->
+      <view class="picker" bindtap="open">
+        <text>{{city}}</text><image src="{{imgUrl}}more.png"></image>
+      </view>
+    <!-- </picker> -->
+  </view>
+  <view class='search-container'>
+    <image src="{{imgUrl}}magnifier.png"></image>
+    <input placeholder='搜索' bindfocus='formSubmit' data-url="../search/index"></input>
+  </view>
+</view>
+<!-- 轮播图 -->
+<view class='banner'>
+  <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000" indicator-color="white" indicator-active-color="coral">  
+      <block wx:for="{{movies}}" wx:for-index="index" wx:key="index">  
+        <swiper-item>  
+          <image src="{{item.banner_img}}" class="slide-image" mode="aspectFill"/>  
+        </swiper-item>  
+      </block>  
+    </swiper> 
+</view>
+<!-- 导航 -->
+<view class='nav-box' >
+  <view class='nav-container'>
+    <form bindsubmit='formSubmit' report-submit='true' class='nav-item' data-url="../company-agent/index" data-isTrue="false">
+      <button formType="submit">
+        <image src="{{imgUrl}}agent01.png"></image>
+        <text>公司代办</text>
+      </button>
+    </form>
+    <form bindsubmit='formSubmit' report-submit='true' class='nav-item'  data-url="../society-agent/index" data-isTrue="false">
+      <button formType="submit">
+        <image src="{{imgUrl}}agent02.png"></image>
+        <text>社保代办</text>
+      </button>
+    </form>
+    <form bindsubmit='formSubmit' report-submit='true' class='nav-item'  data-url="../qualification-agent/index" data-isTrue="true">
+      <button formType="submit">
+        <image src="{{imgUrl}}agent03.png"></image>
+        <text>资质代办</text>
+      </button>
+    </form>
+    <form bindsubmit='formSubmit' report-submit='true' class='nav-item'  data-url="../project-tax/index" data-isTrue="false">
+      <button formType="submit">
+        <image src="{{imgUrl}}agent04.png"></image>
+        <text>账目报税</text>
+      </button>
+    </form>
+  </view>
+  <view class='nav-container'>
+    <form bindsubmit='formSubmit' report-submit='true' class='nav-item' data-url="../vehicle-agent/index" data-isTrue="false">
+      <button formType="submit">
+        <image src="{{imgUrl}}agent05.png"></image>
+        <text>车辆代办</text>
+      </button>
+    </form>
+    <form bindsubmit='formSubmit' report-submit='true' class='nav-item'  data-url="../agent-account/index" data-isTrue="false">
+      <button formType="submit">
+        <image src="{{imgUrl}}agent06.png"></image>
+        <text>代理记账</text>
+      </button>
+    </form>
+    <form bindsubmit='formSubmit' report-submit='true' class='nav-item'  data-url="../qualification-transfer/index" data-isTrue="true">
+      <button formType="submit">
+        <image src="{{imgUrl}}agent07.png"></image>
+        <text>资质转让</text>
+      </button>
+    </form>
+    <form bindsubmit='formSubmit' report-submit='true' class='nav-item'  data-url="../outbound-and-inbound/index" data-isTrue="false">
+      <button formType="submit">
+        <image src="{{imgUrl}}agent08.png"></image>
+        <text>出境入境</text>
+      </button>
+    </form>
+  </view>
+</view>
+<!-- 公司账目 整理账目 港澳台同行证 -->
+<view class='account'>
+  <view class='left'>
+    <!-- <view class='title'>公司注册</view>
+    <view class='subtitle'>香港及海外公司注册</view> -->
+    <image src="{{imgUrl}}index-01.png"></image>
+  </view>
+  <view class='right'>
+    <view class='top'>
+      <image src="{{imgUrl}}index-02.png"></image>
+      <!-- <view class='title'>整理账目</view>
+      <view class='subtitle'>财务审计资产评估税务</view> -->
+    </view>
+    <view class='bottom'>
+      <image src="{{imgUrl}}index-03.png"></image>
+      <!-- <view class='title'>港澳台同行证</view>
+      <view class='subtitle'>通行证及签证代办</view> -->
+    </view>
+  </view>
+</view>
+<!-- 精选专题  -->
+<view class='special'>
+  <view class='title' bindtap='formSubmit' data-url="../selected-topics/index">
+    <text>精选专题</text>
+    <image src="{{imgUrl}}more01.png"></image>
+  </view>
+  <view class='border-top'></view>
+  <view class='image-container'>
+    <view class='img-item'>
+      <!-- <text>你认为新公司做账该怎么做？</text> -->
+      <image src="{{imgUrl}}special01.png"></image>
+    </view>
+    <view class='img-item'>
+      <!-- <text>你知道代理记账报税的流程吗？</text> -->
+      <image src="{{imgUrl}}special02.png"></image>
+    </view>
+    <view class='img-item'>
+      <!-- <text>你认为新公司做账该怎么做？</text> -->
+      <image src="{{imgUrl}}special01.png"></image>
+    </view>
+  </view>
+</view>
+<!-- 推荐企业 -->
+<view class='resume'>
+  <view class='title'>
+    <text>推荐企业</text>
+    <image src="{{imgUrl}}more01.png"></image>
+  </view>
+  <view class='border-top'></view>
+  <view class='list-container'>
+    <block wx:for="{{resume_list}}" wx:key="{{resume_list}}">
+    <view class='list-item' bindtap='formSubmit' data-url="../company-detail/index">
+      <view class='left'>
+        <image src="{{imgUrl}}companyavatar.png"></image>
+      </view>
+      <view class='right'>
+        <view class='title'>代办公司注册（一证五章）专业代理记账</view>
+        <view class='subtitle'>西安比邻财务管理咨询有限公司</view>
+        <view class='sign-container'>
+          <text class='y'>1000元保证金</text>
+          <text class='r'>1000元保证金</text>
+          <text class='b'>1000元保证金</text>
+        </view>
+      </view>
+    </view>
+    <view class='border-top'></view>
+    </block>
+  </view>
+</view>
+ <!-- 底部导航 -->
+<view style='height:108rpx;'></view>
+<view class='footer'>
+  <form report-submit='true' class='item' bindtap='footer_handler' data-url="../index/index">
+    <button formType="submit">
+      <image src="{{imgUrl}}home.png" style="width:40rpx;"></image>
+      <text class='active'>首页</text>
+    </button>
+  </form>
+  <form report-submit='true' class='item' bindtap='footer_handler' data-url="../order/index">
+    <button formType="submit">
+      <image src="{{imgUrl}}order01.png" style="width:40rpx;"></image>
+      <text >订单</text>
+    </button>
+  </form>
+  <form report-submit='true' class='item' bindtap='footer_handler' data-url="../personal-information/index">
+    <button formType="submit">
+      <image src="{{imgUrl}}my01.png"></image>
+      <text>我的</text>
+    </button>
+  </form>
+  <form report-submit='true' class='item' bindtap='footer_handler' data-url="../../server/authority-first/index">
+    <button formType="submit">
+      <image src="{{imgUrl}}busess01.png"></image>
+      <text>商家</text>
+    </button>
+  </form>
+</view>
+
+<!-- 省市级联 -->
+<view wx:if="{{condition}}" class="citypicker">
+  <picker-view indicator-style="height: 50px;" style="width: 100%; height: 300px;" value="{{value}}" bindchange="bindChange" class="citybody">
+    <view class="cityheader">
+      <view bindtap="open" class="city-cancel">取消</view>
+      <view bindtap="open" class="city-true">确定</view>
+    </view>
+    <picker-view-column style="text-align:center;font-size:28rpx;">
+      <view wx:for="{{provinces}}" wx:key="item" style="line-height: 50px;">{{item}}</view>
+    </picker-view-column>
+    <picker-view-column style="text-align:center;font-size:28rpx;">
+      <view wx:for="{{citys}}" wx:key="item" style="line-height: 50px;">{{item}}</view>
+    </picker-view-column>
+  </picker-view>
+</view>
+<!-- 授权登录按钮 -->
+<view class='auth-view' wx:if="{{!authStatus}}">
+  <view class='authorize'>
+    <image src='{{authorize}}'></image>
+    <button class='authorize-btn' wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">关闭</button>
+    <button class='authorize-btn' wx:if="{{!canIUse}}" bindtap='closePanel'>关闭</button>
+  </view>
+</view>

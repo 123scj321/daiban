@@ -1,0 +1,31 @@
+/* pages/server/news/index.wxss */
+page{
+  background: #fff;
+}
+
+/* 收入记录  */
+
+.record-module-item{width: 690rpx;padding: 20rpx;margin: 10rpx auto 0 auto;font-size: 26rpx;color: #333;border-radius:5rpx;display: flex;justify-content: space-between; }
+.record-module-item .left{
+  width:120rpx;
+}
+.record-module-item .left image{
+  width:88rpx;
+  height: 88rpx;
+}
+.record-module-item .right{
+  width:570rpx;
+}
+.record-module-item .right .t1{color: #333;margin: 5rpx 0;font-size:32rpx;display: flex;
+justify-content: space-between;width: 100%;}
+.record-module-item .right .t1 .time{
+  font-size:24rpx;
+  color:#888;
+}
+.record-module-item .right .t2{color: #555;margin: 10rpx 0;font-size:28rpx;}
+
+
+.border-top{
+  width:100%;
+  border-top:2rpx solid #ddd;
+}

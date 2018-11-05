@@ -1,0 +1,223 @@
+/* pages/server/index/index.wxss */
+.header{
+  width:100%;
+  background: url(http://127.0.0.1/img/server/banner-bg.png) top center;
+  background-size: 100% 100%;
+  color:#fff;
+  height: 260rpx;
+}
+.header .top{
+  width:700rpx;
+  margin:0 auto;
+  font-size:24rpx;
+  padding-top:20rpx;
+  padding-bottom:20rpx;
+}
+.header .bottom{
+  width:700rpx;
+  margin:0 auto;
+  margin-top:20rpx;
+  display: flex;
+  justify-content: space-around;
+}
+.header .bottom .item{
+  width:200rpx;
+  text-align: center;
+}
+.header .bottom .item text:first-child{
+  width:200rpx;
+  display: block;
+  font-size:70rpx;
+  font-family: "Myriad Pro";
+}
+.header .bottom .item text:last-child{
+  width:200rpx;
+  display: block;
+  font-size:24rpx;
+  font-family: "Myriad Pro";
+}
+/* 系统通知 */
+.hot_resuorce{
+  width:100%;
+  font-size: 26rpx;
+  display: flex;
+  align-items: center;
+  margin-bottom:20rpx;
+  height: 96rpx;
+  border-bottom: 15rpx solid #f1f1f1;
+}
+.hot_resuorce .left{
+  width:80rpx;
+  margin-left:20rpx;
+}
+.hot_resuorce .left image{
+  display: inline-block;
+  width: 75rpx;
+  height: 56rpx;
+}
+.hot_resuorce .right{
+  width:620rpx;
+  margin-right:20rpx;
+  margin-left:10rpx;
+}
+.hot_resuorce .right .sys-notify{
+  height: 80rpx;
+
+}
+.hot_resuorce .right .sys-notify-item{
+  line-height: 80rpx;
+  display: block;
+  height: 80rpx;
+}
+
+/* 新闻中心 */
+.resume{
+  width:100%;
+  background: #fff;
+  margin-top:10rpx;
+}
+.resume .main-title{
+  width:700rpx;
+  margin:0rpx auto;
+  padding-top:20rpx;
+  padding-bottom:20rpx;
+  font-size:32rpx;
+  color:#0090ec;
+  font-weight: bold;
+}
+.resume .title{
+  width:700rpx;
+  margin:0rpx auto;
+  align-items: center;
+  display: flex;
+  padding-top:20rpx;
+  padding-bottom:20rpx;
+  justify-content: space-between;
+}
+.resume .title text{
+  font-size:32rpx;font-weight: bold;color:#333;
+}
+.resume .title image{
+  width:16rpx;
+  height: 30rpx;
+}
+.resume .list-container{
+  width:100%;
+}
+.resume .list-container .list-item{
+  width:700rpx;
+  display: flex;
+  justify-content: space-between;
+  margin:20rpx auto;
+}
+.resume .list-container .list-item .left{
+  width:190rpx;
+  height: 190rpx;
+  align-items: center;
+  border-radius: 15rpx;
+}
+.resume .list-container .list-item .left image{
+  width:190rpx;
+  height: 190rpx;
+  margin:5rpx 5rpx;
+}
+.resume .list-container .list-item .right{
+  width:450rpx;
+}
+.resume .list-container .list-item .right .title{
+  width:450rpx;
+  overflow: hidden;
+  /* height: 160rpx; */
+  font-size:32rpx;
+  color:#333;
+  padding:0;
+text-overflow:ellipsis;
+display:-webkit-box;
+-webkit-box-orient:vertical;
+-webkit-line-clamp:2;
+}
+.resume .list-container .list-item .right .subtitle{
+  display: flex;
+  justify-content: space-between;
+  font-size:28rpx;
+  margin-top:90rpx;
+  color:#888;
+  padding:0;
+  
+}
+.resume .list-container .list-item .right .sign-container{
+  width:100%;
+  display: flex;
+  border-radius: 5rpx;
+  margin-top:20rpx;
+  align-items: center;
+}
+.resume .list-container .list-item .right .sign-container text{
+  display: block;
+  font-size:28rpx;
+  padding:2rpx 10rpx;
+  margin-right: 10rpx;
+  color:#555555;
+}
+.resume .list-container .list-item .right .sign-container image{
+  width:11rpx;
+  height: 18rpx;
+}
+/* 底部布局 */
+.footer{
+  width:100%;
+  position:fixed;
+  bottom:0;
+  height: 100rpx;
+ background: #fff;
+ border-top:2rpx solid #dddddd;
+  display: flex;
+  justify-content: space-between;
+}
+.footer .item{
+  width:33.33%;
+  text-align: center;
+}
+.footer .item button{
+  width:33.33%;
+  text-align: center;
+  background: #fff;
+  padding:0rpx;
+  
+}
+.footer .item button::after{
+  border: none;
+}
+.footer .item image{
+  /* margin-top:10rpx; */
+  width:42rpx;
+  height: 42rpx;
+  /* margin-bottom:-20rpx; */
+}
+.footer .item text{
+  margin-top:-43rpx;
+  display: block;
+  font-size:22rpx;
+  color:#555555;
+}
+.footer button .active{color:#0090ec;}
+
+.footer .active button::after{
+  border:none;
+}
+#fixed-top{
+  position: fixed;
+  top:-22rpx;
+  width:100%;
+  height:112rpx;
+  background:#fff;
+  z-index:1000000;
+}
+#fixed-top .search-container{
+  margin:24rpx auto;
+}
+
+
+.border-top{
+  border-top:2rpx solid #ddd;
+}

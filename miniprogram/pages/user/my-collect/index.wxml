@@ -1,0 +1,26 @@
+<!--pages/user/my-collect/index.wxml-->
+<!-- 收藏 -->
+<view class='resume'>
+  <view class='list-container'>
+    <block wx:for="{{collect}}" wx:index="index" wx:key="{{collect}}">
+    <view class='list-item'>
+      <view class='left'>
+        <image src="{{imgUrl}}companyavatar.png"></image>
+      </view>
+      <view class='right'>
+        <view class='title'>代办公司注册（一证五章）专业代理记账</view>
+        <view class='subtitle'>西安比邻财务管理咨询有限公司</view>
+        <view class='sign-container'>
+          <view class='delete-btn' bindtap='delete_collect' data-id="{{index}}">
+            <image src="{{imgUrl}}delete01.png"></image>
+          </view>
+          <text class='y'>1000元保证金</text>
+          <text class='r'>1000元保证金</text>
+          <text class='b'>1000元保证金</text>
+        </view>
+      </view>
+    </view>
+    <view class='border-top'></view>
+    </block>
+  </view>
+</view>

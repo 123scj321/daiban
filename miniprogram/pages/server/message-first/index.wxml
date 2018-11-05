@@ -1,0 +1,25 @@
+<!--pages/server/message-first/index.wxml-->
+<!-- 关注列表 -->
+<view class='resume'>
+  <view class='list-container'>
+    <block wx:for="{{notice}}" wx:key='{{notice}}' wx:index="index">
+    <view class='list-item-container' bindtap='formSubmit' data-url='../message-second/index'>
+      <view class='border-top'></view>
+      <view class='list-item'>
+        <view class='left'>
+          <image src="{{imgUrl}}avatar.png"></image>
+        </view>
+        <view class='center'>
+          <view class='title'>用户昵称</view>
+          <view class='subtitle'>2018-01-02</view>
+          <view class='subtitle'>我留了言，请尽快回复我</view>
+        </view>
+        <view class='right'>
+          <image src="{{imgUrl}}phone.png"></image>
+        </view>
+      </view>
+      <view class='border-top'></view>
+    </view>
+    </block>
+  </view>
+</view>

@@ -1,0 +1,107 @@
+<!--pages/user/personal-information/index.wxml-->
+<!--  订单列表  -->
+<view class='container'>
+  <view class='page-content'>
+    <view class='user-face-module'>
+      <view class='user-face'>
+        <image  src='{{imgUrl}}avatar.png'/>
+      </view>
+      <view class='user-info'>
+        <view class='info nickname'>
+          <text bindtap='navToUser' >用户昵称</text>
+        </view>
+      </view>
+    </view>
+    <!-- 今日完成订单 -->
+    <view class='nav-module'>
+      <navigator url='../my-collect/index' class='nav-item'>
+        <view>
+          <image src='{{imgUrl}}pi01.png' class='nav-icon'></image>
+          <text>我的收藏</text>
+        </view>
+        <view>
+          <image  src='{{imgUrl}}more05.png' class='nav-flag'></image>
+        </view>
+      </navigator>
+      <navigator url='../user-server-safe/index' class='nav-item'>
+        <view>
+          <image src='{{imgUrl}}pi02.png' class='nav-icon'></image>
+          <text>用户服务保障</text>
+        </view>
+        <view>
+          <image  src='{{imgUrl}}more05.png' class='nav-flag'></image>
+        </view>
+      </navigator>
+      <navigator url='../question-reback/index' class='nav-item'>
+        <view>
+          <image src='{{imgUrl}}pi03.png' class='nav-icon'></image>
+          <text>问题反馈</text>
+        </view>
+        <view>
+          <image  src='{{imgUrl}}more05.png' class='nav-flag'></image>
+        </view>
+      </navigator>
+      <navigator url='../news/index' class='nav-item'>
+        <view>
+          <image src='{{imgUrl}}pi04.png' class='nav-icon'></image>
+          <text>消息提醒</text>
+        </view>
+        <view>
+          <image  src='{{imgUrl}}more05.png' class='nav-flag'></image>
+        </view>
+      </navigator>
+    </view>
+
+    <view class='nav-module'>
+      <navigator url='../../server/authority-first/index' class='nav-item'>
+        <view>
+          <image src='{{imgUrl}}pi05.png' class='nav-icon'></image>
+          <text>企业入驻</text>
+        </view>
+        <view>
+          <image  src='{{imgUrl}}more05.png' class='nav-flag'></image>
+        </view>
+      </navigator>
+    </view>
+    <!-- 我的客服 -->
+    <view class='nav-module'>
+      <view class='nav-item' bindtap='callPhoneHandler' data-phone="13212341234">
+        <view>
+          <image src='{{imgUrl}}pi06.png' class='nav-icon'></image>
+          <text>联系客服</text>
+        </view>
+        <view style='margin-right:4rpx'>
+          400-000-0000
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+ <!-- 底部导航 -->
+<view style='height:108rpx;'></view>
+<view class='footer'>
+  <form report-submit='true' class='item' bindtap='footer_handler' data-url="../index/index">
+    <button formType="submit">
+      <image src="{{imgUrl}}home01.png" style="width:40rpx;"></image>
+      <text>首页</text>
+    </button>
+  </form>
+  <form report-submit='true' class='item' bindtap='footer_handler' data-url="../order/index">
+    <button formType="submit">
+      <image src="{{imgUrl}}order01.png" style="width:40rpx;"></image>
+      <text >订单</text>
+    </button>
+  </form>
+  <form report-submit='true' class='item' bindtap='footer_handler' data-url="../personal-information/index">
+    <button formType="submit">
+      <image src="{{imgUrl}}my.png"></image>
+      <text class='active'>我的</text>
+    </button>
+  </form>
+  <form report-submit='true' class='item' bindtap='footer_handler' data-url="../../server/authority-first/index">
+    <button formType="submit">
+      <image src="{{imgUrl}}busess01.png"></image>
+      <text>商家</text>
+    </button>
+  </form>
+</view>

@@ -1,0 +1,243 @@
+/* pages/server/authority-second/index.wxss */
+page{
+  background: #f1f2f4;
+}
+.module-container{
+  background: #fff;
+  width:100%;
+  margin:20rpx auto;
+}
+.module-list-item{
+  width:720rpx;
+  height: 90rpx;
+  margin:0 auto;
+}
+.input-container{
+  width:700rpx;
+  margin:0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.input-container .label{
+  width:210rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size:32rpx;
+  color:#333;
+}
+.input-container .input-container{
+  width:480rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size:28rpx;
+  color:#aaa;
+}
+.input-container .input-container input{
+  height: 50rpx;
+  margin-top:20rpx;
+  line-height: 50rpx;
+}
+.module-list-item-textarea{
+  width:700rpx;
+  height: 150rpx;
+  margin:0 auto;
+}
+.module-list-item-textarea .input-container{
+  width:660rpx;
+  margin:0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.textarea-container{
+  width:480rpx;
+  height: 150rpx;
+  font-size:24rpx;
+  margin-top:20rpx;
+}
+.textarea-container textarea{
+  width:480rpx;
+  height: 150rpx;
+  font-size:24rpx;
+  margin-top:20rpx;
+}
+.border-bottom{
+  width:100%;
+  border-top:2rpx solid #e2e2e2;
+}
+
+
+.certificate{
+  width:700rpx;
+  margin:0 auto;
+  display: flex;
+  margin-top:20rpx;
+  justify-content: space-between;
+  padding-top:30rpx;
+  padding-bottom:30rpx; 
+}
+.certificate .left{
+  font-size:30rpx;
+  color:#353535;
+}
+.certificate .left text{
+  display: block;
+}
+.certificate .left .image-container{
+ 
+  display: flex;
+}
+.certificate .left .image-container .image-item{
+  width:137rpx;
+  height: 160rpx;
+  position: relative;
+  margin-right: 10rpx;
+}
+.certificate .left .image-container .image-item icon{
+  width:46rpx;
+  height:46rpx;
+  border-radius: 50%;
+  background: #fff;
+  position: absolute;
+  top:50%;
+  left:50%;
+  
+  margin-left:-23rpx;
+}
+.certificate .left image{
+  width:137rpx;
+  height: 160rpx;
+  margin-top:20rpx;
+  margin-right: 10rpx;
+}
+.certificate .right{
+  text-align: right;
+  width:160rpx;
+  font-size:24rpx;
+  color:#e2e2e2;
+  
+}
+.certificate .acitve{
+  border:2rpx solid #d2d2d2;
+  border-radius:8rpx;
+}
+.certificate .right text{
+  display: block;
+}
+.certificate .right image{
+  width:160rpx;
+  height: 160rpx;
+}
+
+
+.video{
+  width:660rpx;
+  margin:0 auto;
+  display: flex;
+  margin-top:20rpx;
+  justify-content: space-between;
+  
+}
+.video .left{
+  width:534rpx;
+  font-size:30rpx;
+  color:#353535;
+}
+.video .left text{
+  display: block;
+}
+.video .left image{
+  width:137rpx;
+  height: 160rpx;
+  margin-top:20rpx;
+}
+.video .right{
+  text-align: right;
+  width:137rpx;
+  font-size:24rpx;
+  color:#e2e2e2;
+}
+.video .right text{
+  display: block;
+}
+.video .right image{
+  width:137rpx;
+  height: 160rpx;
+  margin-top:20rpx;
+}
+
+.btn-button{
+  width:260rpx;
+  height: 80rpx;
+  /* background: #fff; */
+  margin:0 auto;
+  margin-top:80rpx;
+  position: fixed;
+  bottom:30rpx;
+  left:50%;
+  margin-left:-130rpx;
+  z-index:10000;
+}
+.btn-button button{
+  width:260rpx;
+  height: 80rpx;
+  color:#f98d4f;
+  font-size:30rpx;
+  line-height: 80rpx;
+  border:2rpx solid #f98d4f;
+  border-radius: 160rpx;
+  background: #fff;
+}
+.btn-button button::after{
+  border:none;
+}
+.video-show{
+  width:660rpx;
+  margin:0 auto;
+  display: flex;
+  margin-top:20rpx;
+  justify-content: space-between;
+}
+.video-style{
+  width:670rpx;
+  height: 332rpx;
+}
+
+.notice{
+  width:100%;
+  text-align: center;
+  font-size:24rpx;
+  color:#888;
+  padding-top:4rpx;
+  padding-bottom:4rpx;
+}
+
+/* 按钮 */
+.getPhoneAndYanZhengMaButton{
+  width:100%;
+  position: fixed;
+  bottom:0px;
+}
+.activedButton{
+ width:700rpx;
+  margin:20rpx auto;
+  height: 90rpx;
+  line-height: 90rpx;
+  background: linear-gradient(to bottom,#4eb5f6, #0391ec);
+  color:#fff;
+  /* margin-top:120rpx; */
+}
+/* 审核状态 */
+.apply-status{
+  width:350rpx;
+  margin:100rpx auto;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  font-size:24rpx;
+  color:#888;
+  justify-content: space-between;
+}
+.apply-status icon{
+  width:100rpx;
+  border:2rpx solid #ddd;
+}

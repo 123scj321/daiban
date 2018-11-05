@@ -1,0 +1,18 @@
+<!--pages/server/question/index.wxml-->
+<view class='question-container'>
+  <view class='teacher-abstract'>
+    <icon></icon> 会员的等级高了有什么好处？
+  </view>
+  <view class='text'><text> 1.</text>会员通过续费来激活特权服务；</view>
+  <view  class='text'><text>2.</text>等级越高在搜索排名内排名就越靠前，每天的发布次数也会随之增加；</view>
+  <view  class='text'><text>3.</text>会员享有客服电话优先接入，优先服务等特权。</view>
+</view>
+<view class='question-container'>
+  <view class='teacher-abstract'>
+    <icon></icon> 会员的商家被差评会怎么样？
+  </view>
+  <view class='text'><text> 1.</text>商家如有差评，排名会有影响；</view>
+  <view  class='text'><text>2.</text>差评也会影响成长值的点数，奖扣30分为初次处罚，
+  如一个月内多次遭到差评及投诉，会根据情况对商家
+  进行更多处罚。</view>
+</view>

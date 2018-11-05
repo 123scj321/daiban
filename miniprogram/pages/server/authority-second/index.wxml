@@ -1,0 +1,98 @@
+<!--pages/server/authority-second/index.wxml-->
+<block wx:if="{{true}}">
+<!-- 认证列表  --> 
+<view class='module-container'>
+  <view class='module-list-item'>
+    <view class='input-container'>
+      <view class='label'>企业名称：</view>
+      <view class='input-container'>
+        <input placeholder='请输入您的企业名称' bindchange='get_companyName' value="{{companyName}}"></input>
+      </view>
+    </view>
+    <view class='border-bottom'></view>
+  </view>
+  <view class='module-list-item'>
+    <view class='input-container'>
+      <view class='label'>所在地区：</view>
+      <view class='input-container'>
+        <input placeholder='请选择企业所在地区' bindchange='get_address' value="{{address}}"></input>
+      </view>
+    </view>
+    <view class='border-bottom'></view>
+  </view>
+  <view class='module-list-item'>
+    <view class='input-container'>
+      <view class='label'>法人姓名：</view>
+      <view class='input-container'>
+        <input placeholder='请输入法人姓名' bindchange='get_businessmen' value="{{businessmen}}"></input>
+      </view>
+    </view>
+    <view class='border-bottom'></view>
+  </view>
+  <view class='module-list-item'>
+    <view class='input-container'>
+      <view class='label'>法人身份证：</view>
+      <view class='input-container'>
+        <input placeholder='请输入身份证号码' bindchange='get_Idcard' value="{{Idcard}}" type='number'></input>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 资格证书 -->
+ <view class='module-container'>
+  <view class='certificate'>
+      <view class='left'>
+        <text class="book">企业营业执照：</text>
+        <view class='image-container'>
+        </view>
+      </view>
+      <!-- 默认状态 -->
+      <block wx:if="{{authority==''}}">
+      <view class='right'>
+        <image src="{{imgUrl}}upload.png" bindtap='get_upload_image'></image>
+      </view>
+      </block>
+      <block wx:else>
+      <!-- 图片上传后的状态 -->
+      <view class='right acitve'>
+        <image src="{{authority}}" bindtap='delete_upload_image'></image>
+      </view>
+      </block>
+  </view>
+</view>
+<view class='notice'>
+  <text>以上信息我们已加密，请放心填写</text>
+</view>
+<!-- 联系人 联系电话 -->
+<view class='module-container'>
+  <view class='module-list-item'>
+    <view class='input-container'>
+      <view class='label'>联系人：</view>
+      <view class='input-container'>
+        <input placeholder='请输入姓名' bindblur='get_relativeName' value="{{relativeName}}"></input>
+      </view>
+    </view>
+    <view class='border-bottom'></view>
+  </view>
+  <view class='module-list-item'>
+    <view class='input-container'>
+      <view class='label'>联系电话：</view>
+      <view class='input-container'>
+        <input placeholder='请输入姓名' bindblur='get_relativePhone' value="{{relativePhone}}" type='number'></input>
+      </view>
+    </view>
+</view>
+
+ </view>
+<view class='getPhoneAndYanZhengMaButton'>
+  <button bindtap='getPhoneLogin' class='activedButton'>提交</button>
+</view>
+</block>
+<!-- 待审核 -->
+<!-- <view class='apply-status'>
+  <icon></icon>待审核<icon></icon>
+</view> -->
+<!-- 已审核 -->
+<!-- <view class='apply-status'>
+  <icon></icon>已审核<icon></icon>
+</view> -->

@@ -1,0 +1,86 @@
+<!--pages/server/launch-style/index.wxml-->
+<view class='evaluateContextContainer'>
+    <view class='evaluateContextTitle'>
+      <text>工商服务</text>
+    </view>
+    <view class='evaluateContextButtonList'>
+      <block  wx:for="{{business_server}}" wx:index="{{business_server}}" wx:key="index" wx:item="item">
+        <block wx:if="{{item.status}}">
+            <view class='evaluateContextButtonItemActive' bindtap='delete_style' data-value="{{item.title}}" data-id="{{index}}" data-type="business_server">{{item.title}}</view>
+        </block>
+        <block wx:else>
+            <view class='evaluateContextButtonItem' bindtap='choose_style' data-value="{{item.title}}" data-id="{{index}}" data-type="business_server">{{item.title}}</view>
+        </block>
+      </block>
+    </view>
+    <view class='evaluateContextTitle'>
+      <text>社保代办</text>
+    </view>
+    <view class='evaluateContextButtonList'>
+      <block  wx:for="{{society_agent}}" wx:index="{{society_agent}}" wx:key="index" wx:item="item">
+        <block wx:if="{{item.status}}">
+            <view class='evaluateContextButtonItemActive' bindtap='delete_style' data-value="{{item.title}}" data-id="{{index}}" data-type="society_agent">{{item.title}}</view>
+        </block>
+        <block wx:else>
+            <view class='evaluateContextButtonItem' bindtap='choose_style' data-value="{{item.title}}" data-id="{{index}}" data-type="society_agent">{{item.title}}</view>
+        </block>
+      </block>
+    </view>
+    <view class='evaluateContextTitle'>
+      <text>项目报税（代理记账）</text>
+    </view>
+    <view class='evaluateContextButtonList'>
+      <block  wx:for="{{project_tax}}" wx:index="{{project_tax}}" wx:key="index" wx:item="item">
+        <block wx:if="{{item.status}}">
+            <view class='evaluateContextButtonItemActive' bindtap='delete_style' data-value="{{item.title}}" data-id="{{index}}" data-type="project_tax">{{item.title}}</view>
+        </block>
+        <block wx:else>
+            <view class='evaluateContextButtonItem' bindtap='choose_style' data-value="{{item.title}}" data-id="{{index}}" data-type="project_tax">{{item.title}}</view>
+        </block>
+      </block>
+      
+    </view>
+    <view class='evaluateContextTitle'>
+      <text>车辆代办</text>
+    </view>
+    <view class='evaluateContextButtonList'>
+      <block  wx:for="{{vehicle_tax}}" wx:index="{{vehicle_tax}}" wx:key="index" wx:item="item">
+        <block wx:if="{{item.status}}">
+            <view class='evaluateContextButtonItemActive' bindtap='delete_style' data-value="{{item.title}}" data-id="{{index}}" data-type="vehicle_tax">{{item.title}}</view>
+        </block>
+        <block wx:else>
+            <view class='evaluateContextButtonItem' bindtap='choose_style' data-value="{{item.title}}" data-id="{{index}}" data-type="vehicle_tax">{{item.title}}</view>
+        </block>
+      </block>
+    </view>
+    <view class='evaluateContextTitle'>
+      <text>资质转让</text>
+    </view>
+    <view class='evaluateContextButtonList'>
+      <block  wx:for="{{asset_turn}}" wx:index="{{asset_turn}}" wx:key="index" wx:item="item">
+        <block wx:if="{{item.status}}">
+            <view class='evaluateContextButtonItemActive' bindtap='delete_style' data-value="{{item.title}}" data-id="{{index}}" data-type="asset_turn">{{item.title}}</view>
+        </block>
+        <block wx:else>
+            <view class='evaluateContextButtonItem' bindtap='choose_style' data-value="{{item.title}}" data-id="{{index}}" data-type="asset_turn">{{item.title}}</view>
+        </block>
+      </block>
+    </view>
+    <view class='evaluateContextTitle'>
+      <text>出境入境</text>
+    </view>
+    <view class='evaluateContextButtonList'>
+      <block  wx:for="{{outbound_inbound}}" wx:index="{{outbound_inbound}}" wx:key="index" wx:item="item">
+        <block wx:if="{{item.status}}">
+            <view class='evaluateContextButtonItemActive' bindtap='delete_style' data-value="{{item.title}}" data-id="{{index}}" data-type="outbound_inbound">{{item.title}}</view>
+        </block>
+        <block wx:else>
+            <view class='evaluateContextButtonItem' bindtap='choose_style' data-value="{{item.title}}" data-id="{{index}}" data-type="outbound_inbound">{{item.title}}</view>
+        </block>
+      </block>
+    </view>
+  </view> 
+<view style='height:40rpx'></view>
+<view class='btn-container'>
+  <button bindtap='submit_handler'>提交</button>
+</view>

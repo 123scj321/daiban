@@ -1,0 +1,130 @@
+/* pages/user/selected-topics-detail/index.wxss */
+.title{
+  width:580rpx;
+  margin: 30rpx auto;
+  text-align: center;
+  font-size:40rpx;
+  font-weight: bold;
+  color:#333;
+}
+.subtitle{
+  width:640rpx;
+  margin:30rpx auto;
+  border-radius: 15rpx;
+  background: #f1f2f4;
+  font-size:28rpx;
+  color:#333;
+  padding-bottom: 20rpx;
+  padding-left:20rpx;
+  padding-right: 20rpx; 
+  text-indent: 2rem;
+}
+/* about-us-banner */
+.about-us-banner{
+  width:700rpx;
+  margin:20rpx auto;
+  height: 300rpx;
+}
+.about-us-banner image{
+  width:100%;
+  height: 300rpx;
+}
+/* 导师简介 */
+.teacher-abstract{
+  width:750rpx;
+  display: flex;
+  font-size:30rpx;
+  color:#353535;
+  font-weight: bold;
+}
+.teacher-abstract icon{
+  display: block;
+  width:8rpx;
+  height: 45rpx;
+  background: #0090ec;
+  margin-right: 8rpx;
+  border-radius: 16rpx;
+}
+.teacher-context{
+  width:660rpx;
+  margin:0 auto;
+}
+.teacher-context .text{
+  font-size:24rpx;
+  color:#a6a6a6;
+  line-height: 38rpx;
+}
+.teacher-context .text view{
+  height: 10rpx;
+}
+.teacher-context .teacher-video{
+  width:670rpx;
+  height: 332rpx;
+  margin:30rpx auto;
+  position: relative;
+}
+.teacher-context .teacher-video>image{
+  width:670rpx;
+  height: 332rpx;
+}
+.teacher-context .teacher-video .video-status{
+  width:216rpx;
+  height: 140rpx;
+  position: absolute;
+  top:50%;
+  left:50%;
+  margin-left:-108rpx;
+  margin-top:-70rpx;
+}
+.teacher-context .teacher-video .video-status image{
+  width:216rpx;
+  height: 140rpx;
+}
+.text{
+  width:700rpx;
+  font-size:28rpx;
+  color:#555555;
+  display: flex;
+  margin:10rpx auto;
+}
+.text text{
+  display: block;
+  width:30rpx;
+}
+.duty{
+  width:700rpx;
+  font-size:24rpx;
+  color:#888;
+  margin:30rpx auto;
+  margin-bottom: 60rpx;
+}
+.duty .title1{
+  font-size:24rpx;
+  color:#888;
+}
+.duty .subtitle1{
+  font-size:24rpx;
+  line-height: 48rpx;
+  color:#888;
+}
+.border-top{
+  border-top:2rpx solid #ddd;
+}
+.zan{
+  width:128rpx;
+  height: 128rpx;
+  margin:30rpx auto;
+}
+.zan image{
+   width:128rpx;
+  height: 128rpx;
+  border-radius: 50%;
+  transition: all .5s linear;
+}
+.zan-text{
+  width:100%;
+  text-align: center;
+  font-size:28rpx;
+  margin:30rpx auto;
+  color:#888;
+}

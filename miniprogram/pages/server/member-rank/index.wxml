@@ -1,0 +1,84 @@
+<!--pages/server/member-rank/index.wxml-->
+<!-- 会员 头部 -->
+<view class='user-face-module'>
+  <view class='value-container'>
+    <view class='active'>
+      <text>会员年费：</text>+15/天
+    </view>
+    <view class='item'>
+      <text>会员：</text>+10/天
+    </view>
+    <view class='item'>
+      <text>签到：</text>+5/天
+    </view>
+    <view class='item'>
+      <text>过期会员：</text>-10/天
+    </view>
+  </view>
+  <view class='bar-container'>
+    <view class='item c1'>
+      <text>0</text>
+      <icon style='height:20rpx'></icon>
+      <text>VIP1</text>
+    </view>
+    <view class='item c2'>
+      <text>1000</text>
+      <icon style='height:90rpx'></icon>
+      <text>VIP2</text>
+    </view>
+    <view class='item c3'>
+      <text>2400</text>
+      <icon style='height:160rpx'></icon>
+      <text>VIP3</text>
+    </view>
+    <view class='item c4'>
+      <text>5200</text>
+      <icon style='height:220rpx'></icon>
+      <text>VIP4</text>
+    </view>
+    <view class='item c5'>
+      <text>11000</text>
+      <icon style='height:290rpx'></icon>
+      <text>VIP5</text>
+    </view>
+    <view class='item c6'>
+      <text>26000</text>
+      <icon style='height:360rpx'></icon>
+      <text>VIP6</text>
+    </view>
+  </view>
+</view>
+<view class='question-container'>
+  <view class='teacher-abstract'>
+    <icon></icon> 如何获得成长值
+  </view>
+  <view class='border-top'></view>
+  <view class='text'><text> 1.</text>完成订单一次10点成长值，一天内订单成长值最高增加30点成长值。</view>
+  <view  class='text'><text>2.</text>坚持每日签到，可获得相应的成长值。</view>
+  <view  class='text'><text>3.</text>用户评价为好评时，会增加相应的成长值。</view>
+  <view  class='text'><text>4.</text>续费会员，相应增加20点的成长值。</view>
+</view>
+<view class='question-container'>
+  <view class='teacher-abstract'>
+    <icon></icon>我的成长值
+  </view>
+  <view class='border-top'></view>
+  <view class='my-grow'>
+    <view class='left'>
+      <text>开通会员</text>
+      <text>2018-08-08</text>
+    </view>
+    <view class='right'>
+      <text>+30成长值</text>
+    </view>
+  </view>
+  <view class='my-grow'>
+    <view class='left'>
+      <text>订单（DD123456）</text>
+      <text>2018-08-08</text>
+    </view>
+    <view class='right'>
+      <text>+10成长值</text>
+    </view>
+  </view>
+</view>

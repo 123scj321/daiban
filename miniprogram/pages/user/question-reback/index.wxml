@@ -1,0 +1,10 @@
+<!--pages/user/question-reback/index.wxml-->
+<view class='page-content'>
+  <view class='advise-module'>
+    <view class='user-advise'>
+      <textarea bindinput='userInput' maxlength="200" placeholder='请输入您的意见建议......'></textarea>
+      <view class='user-tip'>{{userAdvise.cursor}}/200</view>
+    </view>
+    <button class='btn' bindtap='submit_btn'>匿名提交</button>
+  </view>
+</view>

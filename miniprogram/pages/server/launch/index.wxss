@@ -1,0 +1,139 @@
+/* pages/server/launch/index.wxss */
+page{
+  background: #f1f2f4;
+}
+.module-item{
+  background: #fff;
+  width:100%;
+  margin-bottom:20rpx;
+}
+.teacher-abstract{
+  width:750rpx;
+  display: flex;
+  font-size:33rpx;
+  color:#353535;
+  font-weight: bold;
+  padding-top:20rpx;
+  padding-bottom:20rpx;
+}
+.teacher-abstract icon{
+  display: block;
+  width:8rpx;
+  height: 45rpx;
+  background: #0090ec;
+  margin-right: 20rpx;
+  border-radius: 16rpx;
+}
+.item{
+  width:700rpx;
+  height: 100rpx;
+  margin:0 auto;
+  line-height: 100rpx;
+  font-size:32rpx;
+  color:#333;
+  display: flex;
+  justify-content: space-between;
+}
+.item .title{
+  width:150rpx;
+  font-size:30rpx;
+  line-height: 90rpx;
+  color:#333;
+}
+.item .context{
+  width:520rpx;
+  display: flex;
+  font-size:30rpx;
+  color:#333;
+  align-items: center;
+}
+.item .context .style-context{
+  width:510rpx;
+  color:#888;
+}
+.item .context input{
+  width:500rpx;
+  margin-top:-10rpx;
+}
+.selected,.select{
+  width:46rpx;
+  height: 46rpx;
+  margin-top:27rpx;
+}
+.more{
+  width:17rpx;
+  height: 32rpx;
+}
+.carmer{
+  width:88rpx;
+  height: 88rpx;
+}
+.carmerAcitve{
+  width:88rpx;
+  height: 88rpx;
+  border:2rpx solid #d2d2d2;
+}
+.border-bottom{
+  border-bottom:2rpx solid #eee;
+}
+.btn-container{
+  position: fixed;
+  bottom:34rpx;
+  width:100%;
+  height: 90rpx;
+  line-height: 90rpx;
+  margin:0 auto;
+}
+.btn-container button{
+  width:700rpx;
+  border-radius: 15rpx;
+  background: linear-gradient(to bottom,#4fb6f7,#0291ec);
+  color:#fff;
+  font-size:40rpx;
+  text-align: center;
+}
+.delete-context{
+  width:700rpx;
+  height: 155rpx;
+  margin:0 auto;
+  line-height: 100rpx;
+  font-size:28rpx;
+  color:#555;
+  display: flex;
+  justify-content: space-between;
+}
+.carmer-context{
+  width:700rpx;
+  height: 288rpx;
+  margin:0 auto;
+  line-height: 100rpx;
+  font-size:28rpx;
+  color:#888;
+}
+.information{
+  width:700rpx;
+  height: 138rpx;
+  margin:0 auto;
+  font-size:28rpx;
+  color:#aaaaaa;
+  padding-top:20rpx;
+}
+/* 会员须知 */
+.module-item-text{
+  width:400rpx;
+  margin:20rpx auto;
+}
+.title{
+  font-size:28rpx;
+  color:#888;
+  line-height: 40rpx;
+}
+.context{
+  font-size:28rpx;
+  color:#888888;
+  line-height: 30rpx;
+}
+.margin-top{
+  width:700rpx;
+  margin:0 auto;
+}

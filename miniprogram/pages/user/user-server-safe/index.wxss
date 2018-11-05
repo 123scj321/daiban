@@ -1,0 +1,37 @@
+/* pages/user/user-server-safe/index.wxss */
+page{
+  font-size:28rpx;
+  color:#333;
+  width:700rpx;
+  margin:0 auto;
+}
+.main-text{
+  text-indent: 1.5rem;
+  font-size:28rpx;
+  color:#555555;
+  display: flex;
+  margin:30rpx auto;
+}
+.item{
+  font-size:32rpx;
+  font-weight: 600;
+  text-align: center;
+}
+.text{
+  font-size:28rpx;
+  color:#555555;
+  display: flex;
+  margin:30rpx auto;
+
+}
+.text text{
+  display: block;
+  width:30rpx;
+}
+.title{
+  font-size:32rpx;
+  font-weight: 600;
+}
+.borderTtop{
+  border-top:2rpx solid #ddd;
+}

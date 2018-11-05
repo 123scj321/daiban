@@ -1,0 +1,40 @@
+<!--pages/server/news/index.wxml-->
+<!--pages/user/news/index.wxml-->
+<block wx:if='{{data.length == 0?true:false}}'>
+    <view class='record-empty'>
+      <view class='record-empty-line'></view>
+      <text>没有找到数据</text>
+    </view>
+  </block>
+  <block wx:else>
+    <view class='record-module' wx:if='{{data.length > 0}}'>
+      <block wx:for='{{data}}'  wx:key='{{item.create_time}}'>
+      <view class='record-module-item' >
+        <view class='left'>
+          <!-- 系统通知 -->
+          <block wx:if="{{item.type===0}}">
+          <image src='{{imgUrl}}notice.png'></image>
+          </block>
+          <!-- 订单提现 -->
+          <block wx:else>
+          <image src='{{imgUrl}}gift.png'></image>
+          </block>
+        </view>
+        <view class='right'>
+          <view class='t1'>
+            <block wx:if="{{item.type===0}}">
+            <text>【系统通知】</text>
+            </block>
+            <block wx:else>
+            <text>【订单提醒】</text>
+            </block>
+            <text class='time'>1分钟前</text>
+          </view>
+          <view class='t2'> {{item.title}}</view>
+        </view>
+      </view>
+      <view class='border-top'></view>
+      </block>
+    </view>
+  </block>
+
